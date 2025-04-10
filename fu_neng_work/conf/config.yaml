@@ -1,0 +1,17 @@
+env: mock
+mock:
+  base_url: https://sso-uat.infocloud.com.cn
+  sso_url: https://sso-uat.infocloud.com.cn
+  bizapi_url: https://bizapi-uat.infocloud.com.cn
+  account:
+    user: aomaker
+    pwd: '123456'
+
+release:
+  base_url: https://sso.infocloud.com.cn
+  sso_url: https://sso.infocloud.com.cn
+  bizapi_url: https://bizapi.infocloud.com.cn
+  account:
+    user: aomaker
+    pwd: '123456'
+

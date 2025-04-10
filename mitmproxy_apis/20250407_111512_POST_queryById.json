@@ -1,0 +1,407 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Documentation for bizapi-uat.infocloud.com.cn",
+    "description": "自动生成的 API 文档",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/sheet-v2/api/sheet/FormEditor/queryById": {
+      "post": {
+        "tags": [
+          "sheet-v2"
+        ],
+        "summary": "queryById",
+        "description": "捕获于 2025-04-07 11:15:12",
+        "operationId": "post_queryById",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "成功响应",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QuerybyidResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/schemas/UnauthorizedError"
+          },
+          "422": {
+            "$ref": "#/components/schemas/HTTPValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "example": "29SW2U8TiR5xIjQ1M"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "QuerybyidResponse": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 200
+          },
+          "errmsg": {
+            "type": "string",
+            "example": "OK"
+          },
+          "transformTime": {
+            "type": "integer",
+            "example": 1743995620705
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "_id": {
+                "type": "string",
+                "example": "29SW2U8TiR5xIjQ1M"
+              },
+              "appConfig": {
+                "type": "object",
+                "properties": {}
+              },
+              "createTime": {
+                "type": "integer",
+                "example": 1721699875147
+              },
+              "enable": {
+                "type": "integer",
+                "example": 0
+              },
+              "formSchema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "模板标签信息表单"
+                  },
+                  "key": {
+                    "type": "string",
+                    "example": "29SW2U8TiR5xIjQ1M"
+                  },
+                  "fields": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "sp": {
+                          "type": "integer",
+                          "example": 0
+                        },
+                        "name": {
+                          "type": "string",
+                          "example": "sceneCode"
+                        },
+                        "type": {
+                          "type": "string",
+                          "example": "text"
+                        },
+                        "label": {
+                          "type": "string",
+                          "example": "场景编码"
+                        },
+                        "showlist": {
+                          "type": "boolean",
+                          "example": true
+                        },
+                        "showquery": {
+                          "type": "boolean",
+                          "example": true
+                        },
+                        "maxlength": {
+                          "type": "integer",
+                          "example": 256
+                        },
+                        "filter": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "label": {
+                                "type": "string",
+                                "example": "测试xx"
+                              },
+                              "policy": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string"
+                                },
+                                "example": [
+                                  "%=测试3",
+                                  "%=测试4"
+                                ]
+                              }
+                            }
+                          },
+                          "example": [
+                            {
+                              "label": "测试xx",
+                              "policy": [
+                                "%=测试3",
+                                "%=测试4"
+                              ]
+                            }
+                          ]
+                        },
+                        "ind": {
+                          "type": "string",
+                          "example": "f_string_153"
+                        }
+                      }
+                    },
+                    "example": [
+                      {
+                        "sp": 0,
+                        "name": "sceneCode",
+                        "type": "text",
+                        "label": "场景编码",
+                        "showlist": true,
+                        "showquery": true,
+                        "maxlength": 256,
+                        "filter": [
+                          {
+                            "label": "测试xx",
+                            "policy": [
+                              "%=测试3",
+                              "%=测试4"
+                            ]
+                          }
+                        ],
+                        "ind": "f_string_153"
+                      },
+                      {
+                        "sp": 1,
+                        "name": "tagType",
+                        "type": "select",
+                        "label": "标签类型",
+                        "showlist": true,
+                        "showquery": true,
+                        "values": [
+                          {
+                            "value": -1,
+                            "text": "请选择",
+                            "selected": true
+                          },
+                          {
+                            "value": 1,
+                            "text": "验证类标签",
+                            "selected": false
+                          },
+                          {
+                            "value": 2,
+                            "text": "通知类标签",
+                            "selected": false
+                          },
+                          {
+                            "value": 3,
+                            "text": "推广类标签",
+                            "selected": false
+                          }
+                        ],
+                        "ind": "f_values_196"
+                      }
+                    ]
+                  },
+                  "msg": {
+                    "type": "string",
+                    "example": "数据提交成功!"
+                  },
+                  "authkey": {
+                    "type": "string",
+                    "example": "W5J4L2BGJSCJN3NM2PIIYEHO5GAAK"
+                  },
+                  "themeColor": {
+                    "type": "string",
+                    "example": "#409eff"
+                  },
+                  "pageWidth": {
+                    "type": "string",
+                    "example": "640px"
+                  },
+                  "sys": {
+                    "type": "integer",
+                    "example": 1
+                  },
+                  "ind": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "example": [
+                      "sceneCode",
+                      "tagType"
+                    ]
+                  }
+                }
+              },
+              "pcConfig": {
+                "type": "object",
+                "properties": {
+                  "tableFields": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "example": [
+                      "sceneCode",
+                      "tagType"
+                    ]
+                  },
+                  "tableFileldsAlias": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string",
+                          "example": "sceneCode"
+                        },
+                        "label": {
+                          "type": "string",
+                          "example": "场景编码"
+                        }
+                      }
+                    },
+                    "example": [
+                      {
+                        "name": "sceneCode",
+                        "label": "场景编码"
+                      },
+                      {
+                        "name": "tagType",
+                        "label": "标签类型"
+                      }
+                    ]
+                  },
+                  "newpagger": {
+                    "type": "boolean",
+                    "example": true
+                  }
+                }
+              },
+              "sceneId": {
+                "type": "string",
+                "example": "1bhTcVtTQyWNe3nvgWw3bjZW"
+              },
+              "sort": {
+                "type": "string",
+                "example": "1682491205460"
+              },
+              "title": {
+                "type": "string",
+                "example": "模板标签信息表单"
+              },
+              "updateTime": {
+                "type": "integer",
+                "example": 1721699875147
+              },
+              "html": {
+                "type": "object",
+                "properties": {
+                  "fid": {
+                    "type": "string",
+                    "example": "649b92012b7bdd0009f42eb6"
+                  },
+                  "filename": {
+                    "type": "string",
+                    "example": "29SW2U8TiR5xIjQ1M.html"
+                  },
+                  "size": {
+                    "type": "integer",
+                    "example": 18594
+                  },
+                  "_blob_": {
+                    "type": "boolean",
+                    "example": true
+                  },
+                  "url": {
+                    "type": "string",
+                    "example": "api/fs/f/649b92012b7bdd0009f42eb6"
+                  }
+                }
+              },
+              "memberId": {
+                "type": "string",
+                "example": "2022140262"
+              },
+              "memberName": {
+                "type": "string",
+                "example": "胡圆"
+              },
+              "pageType": {
+                "type": "string",
+                "example": "0"
+              },
+              "spId": {
+                "type": "string",
+                "example": "220224171538202968"
+              },
+              "userId": {
+                "type": "string",
+                "example": "100895"
+              },
+              "jsonSchema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "example": "模板标签信息表单"
+                  }
+                }
+              }
+            }
+          },
+          "page": {
+            "type": "null"
+          }
+        }
+      },
+      "UnauthorizedError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 401
+          },
+          "message": {
+            "type": "string",
+            "example": "Unauthorized"
+          }
+        }
+      },
+      "HTTPValidationError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 422
+          },
+          "message": {
+            "type": "string",
+            "example": "Validation Error"
+          }
+        }
+      }
+    }
+  }
+}

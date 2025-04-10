@@ -1,0 +1,123 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Documentation for jfapi-uat.infocloud.cc",
+    "description": "自动生成的 API 文档",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/illegal/sms/thesaurus/all": {
+      "post": {
+        "tags": [
+          "illegal"
+        ],
+        "summary": "all",
+        "description": "捕获于 2025-04-07 11:19:39",
+        "operationId": "post_all",
+        "parameters": [
+          {
+            "name": "TOKEN",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "603681e8-ba5b-4437-84cf-3804b315e8ee"
+            },
+            "description": "身份验证令牌"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功响应",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AllResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/schemas/UnauthorizedError"
+          },
+          "422": {
+            "$ref": "#/components/schemas/HTTPValidationError"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AllResponse": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 200
+          },
+          "errmsg": {
+            "type": "string",
+            "example": "操作成功"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "_id": {
+                  "type": "string",
+                  "example": "547506148065574912"
+                },
+                "name": {
+                  "type": "string",
+                  "example": "sdf"
+                }
+              }
+            },
+            "example": [
+              {
+                "_id": "547506148065574912",
+                "name": "sdf"
+              },
+              {
+                "_id": "548491347754647552",
+                "name": "6765"
+              }
+            ]
+          },
+          "requestId": {
+            "type": "string",
+            "example": "57c7fafd7b7d4192aa809a155f7fcc73"
+          }
+        }
+      },
+      "UnauthorizedError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 401
+          },
+          "message": {
+            "type": "string",
+            "example": "Unauthorized"
+          }
+        }
+      },
+      "HTTPValidationError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 422
+          },
+          "message": {
+            "type": "string",
+            "example": "Validation Error"
+          }
+        }
+      }
+    }
+  }
+}

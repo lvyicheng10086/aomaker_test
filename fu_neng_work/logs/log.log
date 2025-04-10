@@ -1,0 +1,1171 @@
+2025-04-01 10:12:05 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧩 开始初始化环境 🧩*************************************
+2025-04-01 10:12:05 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:****************************🍺 环境初始化完成，所有全局配置已加载到config表 🍺****************************
+2025-04-01 10:12:05 [MainProcess]-[MainThread]-[runner.run:76]-[INFO]:<AoMaker> 单进程启动
+2025-04-01 10:12:05 [MainProcess]-[MainThread]-[runner.run:77]-[INFO]:<AoMaker> pytest的执行参数：['-m mock_api', '-s', '--alluredir=D:\\code\\python_project\\aomaker_test\\fu_neng_work\\reports\\json', '--show-capture=no', '--log-format=%(asctime)s %(message)s', '--log-date-format=%Y-%m-%d %H:%M:%S']
+2025-04-01 10:12:08 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetUsersAPI 获取用户列表
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/users
+     Method: GET
+     Request Params: {'offset': 0, 'limit': 2}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 10:12:10 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetUserAPI 获取单个用户信息
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/users/1
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 10:12:12 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: CreateUserAPI 创建新用户
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/users
+     Method: POST
+     Request Json: {'id': 4, 'username': '赵六', 'email': 'zhaoliu@example.com', 'created_at': '2025-04-01T10:12:10.543989', 'is_active': True}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 10:12:14 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetProductsAPI 获取产品列表
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/products
+     Method: GET
+     Request Params: {'offset': 0, 'limit': 10, 'category': '电子产品'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 10:12:16 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetProductAPI 获取单个产品信息
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/products/1
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 10:12:19 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: CreateOrderAPI 创建新订单
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/orders
+     Method: POST
+     Request Json: {'id': 3, 'user_id': 3, 'products': [{'product_id': 3, 'quantity': 2}], 'total_price': 1998.0, 'status': '待付款', 'created_at': '2025-04-01T10:12:17.008594'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 10:12:21 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: UpdateOrderStatusAPI 更新订单状态
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/orders/1/status
+     Method: PUT
+     Request Json: {'status': '已发货'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 10:12:23 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetUserDetailAPI 获取用户详细信息
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/user_details/1
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 10:12:25 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetCommentsAPI 获取评论列表
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/comments
+     Method: GET
+     Request Params: {'product_id': 1, 'min_rating': 4, 'offset': 0, 'limit': 10}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 10:12:27 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetSystemStatusAPI 获取系统状态
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/system/status
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 10:12:29 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: AddProductCommentAPI 添加产品评论
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/products/1/comments
+     Method: POST
+     Request Json: {'id': 5, 'product_id': 1, 'user_id': 2, 'content': '非常满意的购物体验', 'rating': 5, 'created_at': '2025-04-01T10:12:27.847103'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 10:12:32 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: AddProductCommentAPI 添加产品评论
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/products/1/comments
+     Method: POST
+     Request Json: {'id': 6, 'product_id': 1, 'user_id': 3, 'content': '测试删除评论', 'rating': 4, 'created_at': '2025-04-01T10:12:29.995455'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 10:12:34 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: UploadAvatarAPI 上传用户头像
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/users/1/avatar
+     Method: PATCH
+     Request Json: {'file_name': 'avatar.png', 'file_size': 2048, 'file_type': 'image/png'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 10:12:37 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*******************************🌟 测试结束, AoMaker开始收集报告 🌟*******************************
+2025-04-01 10:12:37 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:**********************🌟 AoMaker已完成测试报告(reports/aomaker.html)! 🌟**********************
+2025-04-01 10:12:37 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:***********************************🧹 测试结束，开始清理环境 🧹***********************************
+2025-04-01 10:12:37 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧹 清理环境完成！ 🧹*************************************
+2025-04-01 11:33:14 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧩 开始初始化环境 🧩*************************************
+2025-04-01 11:33:14 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:****************************🍺 环境初始化完成，所有全局配置已加载到config表 🍺****************************
+2025-04-01 11:33:14 [MainProcess]-[MainThread]-[runner.run:76]-[INFO]:<AoMaker> 单进程启动
+2025-04-01 11:33:14 [MainProcess]-[MainThread]-[runner.run:77]-[INFO]:<AoMaker> pytest的执行参数：['-m mock_api', '-s', '--alluredir=D:\\code\\python_project\\aomaker_test\\fu_neng_work\\reports\\json', '--show-capture=no', '--log-format=%(asctime)s %(message)s', '--log-date-format=%Y-%m-%d %H:%M:%S']
+2025-04-01 11:33:16 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetUsersAPI 获取用户列表
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/users
+     Method: GET
+     Request Params: {'offset': 0, 'limit': 2}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 11:33:19 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetUserAPI 获取单个用户信息
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/users/1
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 11:33:21 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: CreateUserAPI 创建新用户
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/users
+     Method: POST
+     Request Json: {'id': 4, 'username': '赵六', 'email': 'zhaoliu@example.com', 'created_at': '2025-04-01T11:33:19.415550', 'is_active': True}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 11:33:23 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetProductsAPI 获取产品列表
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/products
+     Method: GET
+     Request Params: {'offset': 0, 'limit': 10, 'category': '电子产品'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 11:33:25 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetProductAPI 获取单个产品信息
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/products/1
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 11:33:27 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: CreateOrderAPI 创建新订单
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/orders
+     Method: POST
+     Request Json: {'id': 3, 'user_id': 3, 'products': [{'product_id': 3, 'quantity': 2}], 'total_price': 1998.0, 'status': '待付款', 'created_at': '2025-04-01T11:33:25.903413'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 11:33:30 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: UpdateOrderStatusAPI 更新订单状态
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/orders/1/status
+     Method: PUT
+     Request Json: {'status': '已发货'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 11:33:32 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetUserDetailAPI 获取用户详细信息
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/user_details/1
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 11:33:34 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetCommentsAPI 获取评论列表
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/comments
+     Method: GET
+     Request Params: {'product_id': 1, 'min_rating': 4, 'offset': 0, 'limit': 10}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 11:33:36 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetSystemStatusAPI 获取系统状态
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/system/status
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 11:33:38 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: AddProductCommentAPI 添加产品评论
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/products/1/comments
+     Method: POST
+     Request Json: {'id': 5, 'product_id': 1, 'user_id': 2, 'content': '非常满意的购物体验', 'rating': 5, 'created_at': '2025-04-01T11:33:36.742033'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 11:33:40 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: AddProductCommentAPI 添加产品评论
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/products/1/comments
+     Method: POST
+     Request Json: {'id': 6, 'product_id': 1, 'user_id': 3, 'content': '测试删除评论', 'rating': 4, 'created_at': '2025-04-01T11:33:38.896598'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 11:33:43 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: UploadAvatarAPI 上传用户头像
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/users/1/avatar
+     Method: PATCH
+     Request Json: {'file_name': 'avatar.png', 'file_size': 2048, 'file_type': 'image/png'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 11:33:45 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*******************************🌟 测试结束, AoMaker开始收集报告 🌟*******************************
+2025-04-01 11:33:45 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:**********************🌟 AoMaker已完成测试报告(reports/aomaker.html)! 🌟**********************
+2025-04-01 11:33:45 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:***********************************🧹 测试结束，开始清理环境 🧹***********************************
+2025-04-01 11:33:45 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧹 清理环境完成！ 🧹*************************************
+2025-04-01 13:40:37 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧩 开始初始化环境 🧩*************************************
+2025-04-01 13:40:37 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:****************************🍺 环境初始化完成，所有全局配置已加载到config表 🍺****************************
+2025-04-01 13:40:37 [MainProcess]-[MainThread]-[runner.run:76]-[INFO]:<AoMaker> 单进程启动
+2025-04-01 13:40:37 [MainProcess]-[MainThread]-[runner.run:77]-[INFO]:<AoMaker> pytest的执行参数：['-m mock_api', '-s', '--alluredir=D:\\code\\python_project\\aomaker_test\\fu_neng_work\\reports\\json', '--show-capture=no', '--log-format=%(asctime)s %(message)s', '--log-date-format=%Y-%m-%d %H:%M:%S']
+2025-04-01 13:40:40 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetUsersAPI 获取用户列表
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/users
+     Method: GET
+     Request Params: {'offset': 0, 'limit': 2}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 13:40:42 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetUserAPI 获取单个用户信息
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/users/1
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 13:40:44 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: CreateUserAPI 创建新用户
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/users
+     Method: POST
+     Request Json: {'id': 4, 'username': '赵六', 'email': 'zhaoliu@example.com', 'created_at': '2025-04-01T13:40:42.519974', 'is_active': True}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 13:40:46 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetProductsAPI 获取产品列表
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/products
+     Method: GET
+     Request Params: {'offset': 0, 'limit': 10, 'category': '电子产品'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 13:40:48 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetProductAPI 获取单个产品信息
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/products/1
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 13:40:50 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: CreateOrderAPI 创建新订单
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/orders
+     Method: POST
+     Request Json: {'id': 3, 'user_id': 3, 'products': [{'product_id': 3, 'quantity': 2}], 'total_price': 1998.0, 'status': '待付款', 'created_at': '2025-04-01T13:40:48.939869'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 13:40:53 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: UpdateOrderStatusAPI 更新订单状态
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/orders/1/status
+     Method: PUT
+     Request Json: {'status': '已发货'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 13:40:55 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetUserDetailAPI 获取用户详细信息
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/user_details/1
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 13:40:57 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetCommentsAPI 获取评论列表
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/comments
+     Method: GET
+     Request Params: {'product_id': 1, 'min_rating': 4, 'offset': 0, 'limit': 10}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 13:40:59 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetSystemStatusAPI 获取系统状态
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/system/status
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 13:41:01 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: AddProductCommentAPI 添加产品评论
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/products/1/comments
+     Method: POST
+     Request Json: {'id': 5, 'product_id': 1, 'user_id': 2, 'content': '非常满意的购物体验', 'rating': 5, 'created_at': '2025-04-01T13:40:59.765697'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 13:41:03 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: AddProductCommentAPI 添加产品评论
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/products/1/comments
+     Method: POST
+     Request Json: {'id': 6, 'product_id': 1, 'user_id': 3, 'content': '测试删除评论', 'rating': 4, 'created_at': '2025-04-01T13:41:01.898831'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 13:41:06 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: UploadAvatarAPI 上传用户头像
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/users/1/avatar
+     Method: PATCH
+     Request Json: {'file_name': 'avatar.png', 'file_size': 2048, 'file_type': 'image/png'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 13:41:08 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*******************************🌟 测试结束, AoMaker开始收集报告 🌟*******************************
+2025-04-01 13:41:08 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:**********************🌟 AoMaker已完成测试报告(reports/aomaker.html)! 🌟**********************
+2025-04-01 13:41:08 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:***********************************🧹 测试结束，开始清理环境 🧹***********************************
+2025-04-01 13:41:08 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧹 清理环境完成！ 🧹*************************************
+2025-04-01 13:42:50 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧩 开始初始化环境 🧩*************************************
+2025-04-01 13:42:50 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:****************************🍺 环境初始化完成，所有全局配置已加载到config表 🍺****************************
+2025-04-01 13:42:50 [MainProcess]-[MainThread]-[runner.run:76]-[INFO]:<AoMaker> 单进程启动
+2025-04-01 13:42:50 [MainProcess]-[MainThread]-[runner.run:77]-[INFO]:<AoMaker> pytest的执行参数：['-m mock_api', '-s', '--alluredir=D:\\code\\python_project\\aomaker_test\\fu_neng_work\\reports\\json', '--show-capture=no', '--log-format=%(asctime)s %(message)s', '--log-date-format=%Y-%m-%d %H:%M:%S']
+2025-04-01 13:42:53 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetUsersAPI 获取用户列表
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/users
+     Method: GET
+     Request Params: {'offset': 0, 'limit': 2}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 13:42:55 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetUserAPI 获取单个用户信息
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/users/1
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 13:42:57 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: CreateUserAPI 创建新用户
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/users
+     Method: POST
+     Request Json: {'id': 4, 'username': '赵六', 'email': 'zhaoliu@example.com', 'created_at': '2025-04-01T13:42:55.460485', 'is_active': True}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 13:42:59 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetProductsAPI 获取产品列表
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/products
+     Method: GET
+     Request Params: {'offset': 0, 'limit': 10, 'category': '电子产品'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 13:43:01 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetProductAPI 获取单个产品信息
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/products/1
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 13:43:04 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: CreateOrderAPI 创建新订单
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/orders
+     Method: POST
+     Request Json: {'id': 3, 'user_id': 3, 'products': [{'product_id': 3, 'quantity': 2}], 'total_price': 1998.0, 'status': '待付款', 'created_at': '2025-04-01T13:43:01.953839'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 13:43:06 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: UpdateOrderStatusAPI 更新订单状态
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/orders/1/status
+     Method: PUT
+     Request Json: {'status': '已发货'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 13:43:08 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetUserDetailAPI 获取用户详细信息
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/user_details/1
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 13:43:10 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetCommentsAPI 获取评论列表
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/comments
+     Method: GET
+     Request Params: {'product_id': 1, 'min_rating': 4, 'offset': 0, 'limit': 10}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 13:43:12 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetSystemStatusAPI 获取系统状态
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/system/status
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 13:43:14 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: AddProductCommentAPI 添加产品评论
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/products/1/comments
+     Method: POST
+     Request Json: {'id': 5, 'product_id': 1, 'user_id': 2, 'content': '非常满意的购物体验', 'rating': 5, 'created_at': '2025-04-01T13:43:12.738500'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 13:43:16 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: AddProductCommentAPI 添加产品评论
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/products/1/comments
+     Method: POST
+     Request Json: {'id': 6, 'product_id': 1, 'user_id': 3, 'content': '测试删除评论', 'rating': 4, 'created_at': '2025-04-01T13:43:14.878681'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 13:43:19 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: UploadAvatarAPI 上传用户头像
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/users/1/avatar
+     Method: PATCH
+     Request Json: {'file_name': 'avatar.png', 'file_size': 2048, 'file_type': 'image/png'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 13:43:22 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*******************************🌟 测试结束, AoMaker开始收集报告 🌟*******************************
+2025-04-01 13:43:22 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:**********************🌟 AoMaker已完成测试报告(reports/aomaker.html)! 🌟**********************
+2025-04-01 13:43:22 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:***********************************🧹 测试结束，开始清理环境 🧹***********************************
+2025-04-01 13:43:22 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧹 清理环境完成！ 🧹*************************************
+2025-04-01 14:12:06 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧩 开始初始化环境 🧩*************************************
+2025-04-01 14:12:08 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:****************************🍺 环境初始化完成，所有全局配置已加载到config表 🍺****************************
+2025-04-01 14:12:08 [MainProcess]-[MainThread]-[runner.run:76]-[INFO]:<AoMaker> 单进程启动
+2025-04-01 14:12:08 [MainProcess]-[MainThread]-[runner.run:77]-[INFO]:<AoMaker> pytest的执行参数：['-m mock_api', '-s', '--alluredir=D:\\code\\python_project\\aomaker_test\\fu_neng_work\\reports\\json', '--show-capture=no', '--log-format=%(asctime)s %(message)s', '--log-date-format=%Y-%m-%d %H:%M:%S']
+2025-04-01 14:12:11 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetUsersAPI 获取用户列表
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/users
+     Method: GET
+     Request Params: {'offset': 0, 'limit': 2}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 14:12:13 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetUserAPI 获取单个用户信息
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/users/1
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 14:12:15 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: CreateUserAPI 创建新用户
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/users
+     Method: POST
+     Request Json: {'id': 4, 'username': '赵六', 'email': 'zhaoliu@example.com', 'created_at': '2025-04-01T14:12:13.543032', 'is_active': True}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 14:12:17 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetProductsAPI 获取产品列表
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/products
+     Method: GET
+     Request Params: {'offset': 0, 'limit': 10, 'category': '电子产品'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 14:12:19 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetProductAPI 获取单个产品信息
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/products/1
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 14:12:22 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: CreateOrderAPI 创建新订单
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/orders
+     Method: POST
+     Request Json: {'id': 3, 'user_id': 3, 'products': [{'product_id': 3, 'quantity': 2}], 'total_price': 1998.0, 'status': '待付款', 'created_at': '2025-04-01T14:12:19.980784'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 14:12:24 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: UpdateOrderStatusAPI 更新订单状态
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/orders/1/status
+     Method: PUT
+     Request Json: {'status': '已发货'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 14:12:26 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetUserDetailAPI 获取用户详细信息
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/user_details/1
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 14:12:28 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetCommentsAPI 获取评论列表
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/comments
+     Method: GET
+     Request Params: {'product_id': 1, 'min_rating': 4, 'offset': 0, 'limit': 10}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 14:12:30 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetSystemStatusAPI 获取系统状态
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/system/status
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 14:12:32 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: AddProductCommentAPI 添加产品评论
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/products/1/comments
+     Method: POST
+     Request Json: {'id': 5, 'product_id': 1, 'user_id': 2, 'content': '非常满意的购物体验', 'rating': 5, 'created_at': '2025-04-01T14:12:30.767388'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 14:12:34 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: AddProductCommentAPI 添加产品评论
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/products/1/comments
+     Method: POST
+     Request Json: {'id': 6, 'product_id': 1, 'user_id': 3, 'content': '测试删除评论', 'rating': 4, 'created_at': '2025-04-01T14:12:32.905953'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 14:12:37 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: UploadAvatarAPI 上传用户头像
+🚀 <Request>
+     URL: http://127.0.0.1:9999/api/users/1/avatar
+     Method: PATCH
+     Request Json: {'file_name': 'avatar.png', 'file_size': 2048, 'file_type': 'image/png'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 14:12:39 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*******************************🌟 测试结束, AoMaker开始收集报告 🌟*******************************
+2025-04-01 14:12:39 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:**********************🌟 AoMaker已完成测试报告(reports/aomaker.html)! 🌟**********************
+2025-04-01 14:12:39 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:***********************************🧹 测试结束，开始清理环境 🧹***********************************
+2025-04-01 14:12:39 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧹 清理环境完成！ 🧹*************************************
+2025-04-01 14:14:41 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧩 开始初始化环境 🧩*************************************
+2025-04-01 14:14:44 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:****************************🍺 环境初始化完成，所有全局配置已加载到config表 🍺****************************
+2025-04-01 14:14:44 [MainProcess]-[MainThread]-[runner.run:76]-[INFO]:<AoMaker> 单进程启动
+2025-04-01 14:14:44 [MainProcess]-[MainThread]-[runner.run:77]-[INFO]:<AoMaker> pytest的执行参数：['-m mock_api', '-s', '--alluredir=D:\\code\\python_project\\aomaker_test\\fu_neng_work\\reports\\json', '--show-capture=no', '--log-format=%(asctime)s %(message)s', '--log-date-format=%Y-%m-%d %H:%M:%S']
+2025-04-01 14:14:46 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*******************************🌟 测试结束, AoMaker开始收集报告 🌟*******************************
+2025-04-01 14:14:46 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:**********************🌟 AoMaker已完成测试报告(reports/aomaker.html)! 🌟**********************
+2025-04-01 14:14:46 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:***********************************🧹 测试结束，开始清理环境 🧹***********************************
+2025-04-01 14:14:46 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧹 清理环境完成！ 🧹*************************************
+2025-04-01 14:14:56 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧩 开始初始化环境 🧩*************************************
+2025-04-01 14:14:59 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:****************************🍺 环境初始化完成，所有全局配置已加载到config表 🍺****************************
+2025-04-01 14:14:59 [MainProcess]-[MainThread]-[runner.run:76]-[INFO]:<AoMaker> 单进程启动
+2025-04-01 14:14:59 [MainProcess]-[MainThread]-[runner.run:77]-[INFO]:<AoMaker> pytest的执行参数：['-m mock_api', '-s', '--alluredir=D:\\code\\python_project\\aomaker_test\\fu_neng_work\\reports\\json', '--show-capture=no', '--log-format=%(asctime)s %(message)s', '--log-date-format=%Y-%m-%d %H:%M:%S']
+2025-04-01 14:15:01 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*******************************🌟 测试结束, AoMaker开始收集报告 🌟*******************************
+2025-04-01 14:15:01 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:**********************🌟 AoMaker已完成测试报告(reports/aomaker.html)! 🌟**********************
+2025-04-01 14:15:02 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:***********************************🧹 测试结束，开始清理环境 🧹***********************************
+2025-04-01 14:15:02 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧹 清理环境完成！ 🧹*************************************
+2025-04-01 14:23:52 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧩 开始初始化环境 🧩*************************************
+2025-04-01 14:23:55 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:****************************🍺 环境初始化完成，所有全局配置已加载到config表 🍺****************************
+2025-04-01 14:23:55 [MainProcess]-[MainThread]-[runner.run:76]-[INFO]:<AoMaker> 单进程启动
+2025-04-01 14:23:55 [MainProcess]-[MainThread]-[runner.run:77]-[INFO]:<AoMaker> pytest的执行参数：['-m mock_api', '-s', '--alluredir=D:\\code\\python_project\\aomaker_test\\fu_neng_work\\reports\\json', '--show-capture=no', '--log-format=%(asctime)s %(message)s', '--log-date-format=%Y-%m-%d %H:%M:%S']
+2025-04-01 14:23:58 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetUsersAPI 获取用户列表
+🚀 <Request>
+     URL: http://127.0.0.1:8000/api/users
+     Method: GET
+     Request Params: {'offset': 0, 'limit': 2}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 14:24:00 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetUserAPI 获取单个用户信息
+🚀 <Request>
+     URL: http://127.0.0.1:8000/api/users/1
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 14:24:02 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: CreateUserAPI 创建新用户
+🚀 <Request>
+     URL: http://127.0.0.1:8000/api/users
+     Method: POST
+     Request Json: {'id': 4, 'username': '赵六', 'email': 'zhaoliu@example.com', 'created_at': '2025-04-01T14:24:00.644676', 'is_active': True}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 14:24:04 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetProductsAPI 获取产品列表
+🚀 <Request>
+     URL: http://127.0.0.1:8000/api/products
+     Method: GET
+     Request Params: {'offset': 0, 'limit': 10, 'category': '电子产品'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 14:24:06 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetProductAPI 获取单个产品信息
+🚀 <Request>
+     URL: http://127.0.0.1:8000/api/products/1
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 14:24:09 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: CreateOrderAPI 创建新订单
+🚀 <Request>
+     URL: http://127.0.0.1:8000/api/orders
+     Method: POST
+     Request Json: {'id': 3, 'user_id': 3, 'products': [{'product_id': 3, 'quantity': 2}], 'total_price': 1998.0, 'status': '待付款', 'created_at': '2025-04-01T14:24:07.057883'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 14:24:11 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: UpdateOrderStatusAPI 更新订单状态
+🚀 <Request>
+     URL: http://127.0.0.1:8000/api/orders/1/status
+     Method: PUT
+     Request Json: {'status': '已发货'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 14:24:13 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetUserDetailAPI 获取用户详细信息
+🚀 <Request>
+     URL: http://127.0.0.1:8000/api/user_details/1
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 14:24:15 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetCommentsAPI 获取评论列表
+🚀 <Request>
+     URL: http://127.0.0.1:8000/api/comments
+     Method: GET
+     Request Params: {'product_id': 1, 'min_rating': 4, 'offset': 0, 'limit': 10}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 14:24:17 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetSystemStatusAPI 获取系统状态
+🚀 <Request>
+     URL: http://127.0.0.1:8000/api/system/status
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 14:24:19 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: AddProductCommentAPI 添加产品评论
+🚀 <Request>
+     URL: http://127.0.0.1:8000/api/products/1/comments
+     Method: POST
+     Request Json: {'id': 5, 'product_id': 1, 'user_id': 2, 'content': '非常满意的购物体验', 'rating': 5, 'created_at': '2025-04-01T14:24:17.814088'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 14:24:21 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: AddProductCommentAPI 添加产品评论
+🚀 <Request>
+     URL: http://127.0.0.1:8000/api/products/1/comments
+     Method: POST
+     Request Json: {'id': 6, 'product_id': 1, 'user_id': 3, 'content': '测试删除评论', 'rating': 4, 'created_at': '2025-04-01T14:24:19.941935'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 14:24:24 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: UploadAvatarAPI 上传用户头像
+🚀 <Request>
+     URL: http://127.0.0.1:8000/api/users/1/avatar
+     Method: PATCH
+     Request Json: {'file_name': 'avatar.png', 'file_size': 2048, 'file_type': 'image/png'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 14:24:26 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*******************************🌟 测试结束, AoMaker开始收集报告 🌟*******************************
+2025-04-01 14:24:26 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:**********************🌟 AoMaker已完成测试报告(reports/aomaker.html)! 🌟**********************
+2025-04-01 14:24:26 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:***********************************🧹 测试结束，开始清理环境 🧹***********************************
+2025-04-01 14:24:26 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧹 清理环境完成！ 🧹*************************************
+2025-04-01 17:15:38 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧩 开始初始化环境 🧩*************************************
+2025-04-01 17:15:41 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:****************************🍺 环境初始化完成，所有全局配置已加载到config表 🍺****************************
+2025-04-01 17:15:41 [MainProcess]-[MainThread]-[runner.run:76]-[INFO]:<AoMaker> 单进程启动
+2025-04-01 17:15:41 [MainProcess]-[MainThread]-[runner.run:77]-[INFO]:<AoMaker> pytest的执行参数：['-m mock_api', '-s', '--alluredir=D:\\code\\python_project\\aomaker_test\\fu_neng_work\\reports\\json', '--show-capture=no', '--log-format=%(asctime)s %(message)s', '--log-date-format=%Y-%m-%d %H:%M:%S']
+2025-04-01 17:15:43 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetUsersAPI 获取用户列表
+🚀 <Request>
+     URL: http://127.0.0.1:8000/api/users
+     Method: GET
+     Request Params: {'offset': 0, 'limit': 2}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 17:15:45 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetUserAPI 获取单个用户信息
+🚀 <Request>
+     URL: http://127.0.0.1:8000/api/users/1
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 17:15:48 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: CreateUserAPI 创建新用户
+🚀 <Request>
+     URL: http://127.0.0.1:8000/api/users
+     Method: POST
+     Request Json: {'id': 4, 'username': '赵六', 'email': 'zhaoliu@example.com', 'created_at': '2025-04-01T17:15:45.972147', 'is_active': True}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 17:15:50 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetProductsAPI 获取产品列表
+🚀 <Request>
+     URL: http://127.0.0.1:8000/api/products
+     Method: GET
+     Request Params: {'offset': 0, 'limit': 10, 'category': '电子产品'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 17:15:52 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetProductAPI 获取单个产品信息
+🚀 <Request>
+     URL: http://127.0.0.1:8000/api/products/1
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 17:15:54 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: CreateOrderAPI 创建新订单
+🚀 <Request>
+     URL: http://127.0.0.1:8000/api/orders
+     Method: POST
+     Request Json: {'id': 3, 'user_id': 3, 'products': [{'product_id': 3, 'quantity': 2}], 'total_price': 1998.0, 'status': '待付款', 'created_at': '2025-04-01T17:15:52.462765'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 17:15:56 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: UpdateOrderStatusAPI 更新订单状态
+🚀 <Request>
+     URL: http://127.0.0.1:8000/api/orders/1/status
+     Method: PUT
+     Request Json: {'status': '已发货'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 17:15:58 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetUserDetailAPI 获取用户详细信息
+🚀 <Request>
+     URL: http://127.0.0.1:8000/api/user_details/1
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 17:16:01 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetCommentsAPI 获取评论列表
+🚀 <Request>
+     URL: http://127.0.0.1:8000/api/comments
+     Method: GET
+     Request Params: {'product_id': 1, 'min_rating': 4, 'offset': 0, 'limit': 10}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 17:16:03 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetSystemStatusAPI 获取系统状态
+🚀 <Request>
+     URL: http://127.0.0.1:8000/api/system/status
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 17:16:05 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: AddProductCommentAPI 添加产品评论
+🚀 <Request>
+     URL: http://127.0.0.1:8000/api/products/1/comments
+     Method: POST
+     Request Json: {'id': 5, 'product_id': 1, 'user_id': 2, 'content': '非常满意的购物体验', 'rating': 5, 'created_at': '2025-04-01T17:16:03.268917'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 17:16:07 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: AddProductCommentAPI 添加产品评论
+🚀 <Request>
+     URL: http://127.0.0.1:8000/api/products/1/comments
+     Method: POST
+     Request Json: {'id': 6, 'product_id': 1, 'user_id': 3, 'content': '测试删除评论', 'rating': 4, 'created_at': '2025-04-01T17:16:05.411020'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 17:16:09 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: UploadAvatarAPI 上传用户头像
+🚀 <Request>
+     URL: http://127.0.0.1:8000/api/users/1/avatar
+     Method: PATCH
+     Request Json: {'file_name': 'avatar.png', 'file_size': 2048, 'file_type': 'image/png'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 17:16:11 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*******************************🌟 测试结束, AoMaker开始收集报告 🌟*******************************
+2025-04-01 17:16:11 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:**********************🌟 AoMaker已完成测试报告(reports/aomaker.html)! 🌟**********************
+2025-04-01 17:16:11 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:***********************************🧹 测试结束，开始清理环境 🧹***********************************
+2025-04-01 17:16:11 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧹 清理环境完成！ 🧹*************************************
+2025-04-01 17:17:51 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧩 开始初始化环境 🧩*************************************
+2025-04-01 17:17:54 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:****************************🍺 环境初始化完成，所有全局配置已加载到config表 🍺****************************
+2025-04-01 17:17:54 [MainProcess]-[MainThread]-[runner.run:76]-[INFO]:<AoMaker> 单进程启动
+2025-04-01 17:17:54 [MainProcess]-[MainThread]-[runner.run:77]-[INFO]:<AoMaker> pytest的执行参数：['-m mock_api', '-s', '--alluredir=D:\\code\\python_project\\aomaker_test\\fu_neng_work\\reports\\json', '--show-capture=no', '--log-format=%(asctime)s %(message)s', '--log-date-format=%Y-%m-%d %H:%M:%S']
+2025-04-01 17:17:55 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetUsersAPI 获取用户列表
+🚀 <Request>
+     URL: https://sso-uat.infocloud.cc/api/users
+     Method: GET
+     Request Params: {'offset': 0, 'limit': 2}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 17:17:56 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetUserAPI 获取单个用户信息
+🚀 <Request>
+     URL: https://sso-uat.infocloud.cc/api/users/1
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 17:17:56 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: CreateUserAPI 创建新用户
+🚀 <Request>
+     URL: https://sso-uat.infocloud.cc/api/users
+     Method: POST
+     Request Json: {'id': 4, 'username': '赵六', 'email': 'zhaoliu@example.com', 'created_at': '2025-04-01T17:17:56.225750', 'is_active': True}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 17:17:56 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetProductsAPI 获取产品列表
+🚀 <Request>
+     URL: https://sso-uat.infocloud.cc/api/products
+     Method: GET
+     Request Params: {'offset': 0, 'limit': 10, 'category': '电子产品'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 17:17:56 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetProductAPI 获取单个产品信息
+🚀 <Request>
+     URL: https://sso-uat.infocloud.cc/api/products/1
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 17:17:56 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: CreateOrderAPI 创建新订单
+🚀 <Request>
+     URL: https://sso-uat.infocloud.cc/api/orders
+     Method: POST
+     Request Json: {'id': 3, 'user_id': 3, 'products': [{'product_id': 3, 'quantity': 2}], 'total_price': 1998.0, 'status': '待付款', 'created_at': '2025-04-01T17:17:56.586622'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 17:17:56 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: UpdateOrderStatusAPI 更新订单状态
+🚀 <Request>
+     URL: https://sso-uat.infocloud.cc/api/orders/1/status
+     Method: PUT
+     Request Json: {'status': '已发货'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 17:17:56 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetUserDetailAPI 获取用户详细信息
+🚀 <Request>
+     URL: https://sso-uat.infocloud.cc/api/user_details/1
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 17:17:56 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetCommentsAPI 获取评论列表
+🚀 <Request>
+     URL: https://sso-uat.infocloud.cc/api/comments
+     Method: GET
+     Request Params: {'product_id': 1, 'min_rating': 4, 'offset': 0, 'limit': 10}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 17:17:57 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: GetSystemStatusAPI 获取系统状态
+🚀 <Request>
+     URL: https://sso-uat.infocloud.cc/api/system/status
+     Method: GET
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 17:17:57 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: AddProductCommentAPI 添加产品评论
+🚀 <Request>
+     URL: https://sso-uat.infocloud.cc/api/products/1/comments
+     Method: POST
+     Request Json: {'id': 5, 'product_id': 1, 'user_id': 2, 'content': '非常满意的购物体验', 'rating': 5, 'created_at': '2025-04-01T17:17:57.154649'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 17:17:57 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: AddProductCommentAPI 添加产品评论
+🚀 <Request>
+     URL: https://sso-uat.infocloud.cc/api/products/1/comments
+     Method: POST
+     Request Json: {'id': 6, 'product_id': 1, 'user_id': 3, 'content': '测试删除评论', 'rating': 4, 'created_at': '2025-04-01T17:17:57.258988'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 17:17:57 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: UploadAvatarAPI 上传用户头像
+🚀 <Request>
+     URL: https://sso-uat.infocloud.cc/api/users/1/avatar
+     Method: PATCH
+     Request Json: {'file_name': 'avatar.png', 'file_size': 2048, 'file_type': 'image/png'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 17:17:59 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*******************************🌟 测试结束, AoMaker开始收集报告 🌟*******************************
+2025-04-01 17:17:59 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:**********************🌟 AoMaker已完成测试报告(reports/aomaker.html)! 🌟**********************
+2025-04-01 17:17:59 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:***********************************🧹 测试结束，开始清理环境 🧹***********************************
+2025-04-01 17:17:59 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧹 清理环境完成！ 🧹*************************************
+2025-04-01 17:28:04 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧩 开始初始化环境 🧩*************************************
+2025-04-01 17:28:07 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:****************************🍺 环境初始化完成，所有全局配置已加载到config表 🍺****************************
+2025-04-01 17:28:07 [MainProcess]-[MainThread]-[runner.run:76]-[INFO]:<AoMaker> 单进程启动
+2025-04-01 17:28:07 [MainProcess]-[MainThread]-[runner.run:77]-[INFO]:<AoMaker> pytest的执行参数：['-m mock_api', '-s', '--alluredir=D:\\code\\python_project\\aomaker_test\\fu_neng_work\\reports\\json', '--show-capture=no', '--log-format=%(asctime)s %(message)s', '--log-date-format=%Y-%m-%d %H:%M:%S']
+2025-04-01 17:28:09 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*******************************🌟 测试结束, AoMaker开始收集报告 🌟*******************************
+2025-04-01 17:28:09 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:**********************🌟 AoMaker已完成测试报告(reports/aomaker.html)! 🌟**********************
+2025-04-01 17:28:09 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:***********************************🧹 测试结束，开始清理环境 🧹***********************************
+2025-04-01 17:28:09 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧹 清理环境完成！ 🧹*************************************
+2025-04-01 17:33:06 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧩 开始初始化环境 🧩*************************************
+2025-04-01 17:33:09 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:****************************🍺 环境初始化完成，所有全局配置已加载到config表 🍺****************************
+2025-04-01 17:33:09 [MainProcess]-[MainThread]-[runner.run:76]-[INFO]:<AoMaker> 单进程启动
+2025-04-01 17:33:09 [MainProcess]-[MainThread]-[runner.run:77]-[INFO]:<AoMaker> pytest的执行参数：['-m mock_api', '-s', '--alluredir=D:\\code\\python_project\\aomaker_test\\fu_neng_work\\reports\\json', '--show-capture=no', '--log-format=%(asctime)s %(message)s', '--log-date-format=%Y-%m-%d %H:%M:%S']
+2025-04-01 17:33:10 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: PostGetByTokenAPI 捕获于 2025-03-27 10:21:10
+🚀 <Request>
+     URL: https://sso-uat.infocloud.cc/sso/platform/login/info/get-by-token
+     Method: POST
+     Request Json: {'token': '1d9b7598-5a42-4dcd-9d94-8c226b1fb9ae'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 17:33:12 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*******************************🌟 测试结束, AoMaker开始收集报告 🌟*******************************
+2025-04-01 17:33:12 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:**********************🌟 AoMaker已完成测试报告(reports/aomaker.html)! 🌟**********************
+2025-04-01 17:33:12 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:***********************************🧹 测试结束，开始清理环境 🧹***********************************
+2025-04-01 17:33:12 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧹 清理环境完成！ 🧹*************************************
+2025-04-01 17:37:44 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧩 开始初始化环境 🧩*************************************
+2025-04-01 17:37:47 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:****************************🍺 环境初始化完成，所有全局配置已加载到config表 🍺****************************
+2025-04-01 17:37:47 [MainProcess]-[MainThread]-[runner.run:76]-[INFO]:<AoMaker> 单进程启动
+2025-04-01 17:37:47 [MainProcess]-[MainThread]-[runner.run:77]-[INFO]:<AoMaker> pytest的执行参数：['-m mock_api', '-s', '--alluredir=D:\\code\\python_project\\aomaker_test\\fu_neng_work\\reports\\json', '--show-capture=no', '--log-format=%(asctime)s %(message)s', '--log-date-format=%Y-%m-%d %H:%M:%S']
+2025-04-01 17:37:48 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: PostGetByTokenAPI 捕获于 2025-03-27 10:21:10
+🚀 <Request>
+     URL: https://sso-uat.infocloud.cc/sso/platform/login/info/get-by-token
+     Method: POST
+     Request Json: {'token': '721ce81d-d2a7-4e1f-8725-0471e05c9274'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 17:37:51 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*******************************🌟 测试结束, AoMaker开始收集报告 🌟*******************************
+2025-04-01 17:37:51 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:**********************🌟 AoMaker已完成测试报告(reports/aomaker.html)! 🌟**********************
+2025-04-01 17:37:51 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:***********************************🧹 测试结束，开始清理环境 🧹***********************************
+2025-04-01 17:37:51 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧹 清理环境完成！ 🧹*************************************
+2025-04-01 17:45:20 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧩 开始初始化环境 🧩*************************************
+2025-04-01 17:45:40 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧩 开始初始化环境 🧩*************************************
+2025-04-01 17:46:07 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧩 开始初始化环境 🧩*************************************
+2025-04-01 17:48:44 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧩 开始初始化环境 🧩*************************************
+2025-04-01 17:48:47 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:****************************🍺 环境初始化完成，所有全局配置已加载到config表 🍺****************************
+2025-04-01 17:48:47 [MainProcess]-[MainThread]-[runner.run:76]-[INFO]:<AoMaker> 单进程启动
+2025-04-01 17:48:47 [MainProcess]-[MainThread]-[runner.run:77]-[INFO]:<AoMaker> pytest的执行参数：['-m mock_api', '-s', '--alluredir=D:\\code\\python_project\\aomaker_test\\fu_neng_work\\reports\\json', '--show-capture=no', '--log-format=%(asctime)s %(message)s', '--log-date-format=%Y-%m-%d %H:%M:%S']
+2025-04-01 17:48:48 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: PostGetByTokenAPI 捕获于 2025-03-27 10:21:10
+🚀 <Request>
+     URL: https://sso-uat.infocloud.cc/sso/platform/login/info/get-by-token
+     Method: POST
+     Request Json: {'token': 'cd7d50fe-7eec-4e4a-a61d-7e03111815e0'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 17:48:50 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*******************************🌟 测试结束, AoMaker开始收集报告 🌟*******************************
+2025-04-01 17:48:50 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:**********************🌟 AoMaker已完成测试报告(reports/aomaker.html)! 🌟**********************
+2025-04-01 17:48:50 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:***********************************🧹 测试结束，开始清理环境 🧹***********************************
+2025-04-01 17:48:50 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧹 清理环境完成！ 🧹*************************************
+2025-04-01 17:49:29 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧩 开始初始化环境 🧩*************************************
+2025-04-01 17:49:32 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:****************************🍺 环境初始化完成，所有全局配置已加载到config表 🍺****************************
+2025-04-01 17:49:32 [MainProcess]-[MainThread]-[runner.run:76]-[INFO]:<AoMaker> 单进程启动
+2025-04-01 17:49:32 [MainProcess]-[MainThread]-[runner.run:77]-[INFO]:<AoMaker> pytest的执行参数：['-m mock_api', '-s', '--alluredir=D:\\code\\python_project\\aomaker_test\\fu_neng_work\\reports\\json', '--show-capture=no', '--log-format=%(asctime)s %(message)s', '--log-date-format=%Y-%m-%d %H:%M:%S']
+2025-04-01 17:49:33 [MainProcess]-[MainThread]-[logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: PostGetByTokenAPI 捕获于 2025-03-27 10:21:10
+🚀 <Request>
+     URL: https://sso-uat.infocloud.cc/sso/platform/login/info/get-by-token
+     Method: POST
+     Request Json: {'token': '100707f7-5987-4504-8e0e-e1388ded29c8'}
+✅ <Response>
+     Response Body: 
+====================================================================================================
+2025-04-01 17:49:35 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*******************************🌟 测试结束, AoMaker开始收集报告 🌟*******************************
+2025-04-01 17:49:35 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:**********************🌟 AoMaker已完成测试报告(reports/aomaker.html)! 🌟**********************
+2025-04-01 17:49:35 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:***********************************🧹 测试结束，开始清理环境 🧹***********************************
+2025-04-01 17:49:35 [MainProcess]-[MainThread]-[_printer.wrapper:18]-[INFO]:*************************************🧹 清理环境完成！ 🧹*************************************

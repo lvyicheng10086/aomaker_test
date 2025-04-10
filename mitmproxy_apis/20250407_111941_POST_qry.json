@@ -1,0 +1,382 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Documentation for jfapi-uat.infocloud.cc",
+    "description": "自动生成的 API 文档",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/op/scheduled/task/qry": {
+      "post": {
+        "tags": [
+          "op"
+        ],
+        "summary": "qry",
+        "description": "捕获于 2025-04-07 11:19:41",
+        "operationId": "post_qry",
+        "parameters": [
+          {
+            "name": "TOKEN",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "603681e8-ba5b-4437-84cf-3804b315e8ee"
+            },
+            "description": "身份验证令牌"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功响应",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QryResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/schemas/UnauthorizedError"
+          },
+          "422": {
+            "$ref": "#/components/schemas/HTTPValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "page": {
+                    "type": "integer",
+                    "example": 1
+                  },
+                  "pageSize": {
+                    "type": "integer",
+                    "example": 10
+                  },
+                  "params": {
+                    "type": "object",
+                    "properties": {
+                      "where": {
+                        "type": "string",
+                        "example": "ctime=between=('undefined 00:00:00','undefined 23:59:59') and approveStatus=in=(1,2,-1)"
+                      },
+                      "sort": {
+                        "type": "string",
+                        "example": "id.desc"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "QryResponse": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 200
+          },
+          "errmsg": {
+            "type": "string",
+            "example": "操作成功"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "del": {
+                  "type": "boolean",
+                  "example": false
+                },
+                "utime": {
+                  "type": "string",
+                  "example": "2024-10-16 09:21:49"
+                },
+                "ctime": {
+                  "type": "string",
+                  "example": "2024-10-16 09:12:22"
+                },
+                "cid": {
+                  "type": "string",
+                  "example": "BJS10173"
+                },
+                "cname": {
+                  "type": "string",
+                  "example": "XJL"
+                },
+                "uid": {
+                  "type": "null"
+                },
+                "uname": {
+                  "type": "null"
+                },
+                "enterpriseId": {
+                  "type": "string",
+                  "example": "122330"
+                },
+                "accountId": {
+                  "type": "string",
+                  "example": "BJS10173"
+                },
+                "id": {
+                  "type": "string",
+                  "example": "1043856048560054272"
+                },
+                "name": {
+                  "type": "string",
+                  "example": "自由发送"
+                },
+                "fromPt": {
+                  "type": "integer",
+                  "example": 2
+                },
+                "content": {
+                  "type": "string",
+                  "example": "自由发送 拒收请回复R"
+                },
+                "templateId": {
+                  "type": "string",
+                  "example": "1043856047280791552"
+                },
+                "planTels": {
+                  "type": "integer",
+                  "example": 1
+                },
+                "planMsgNum": {
+                  "type": "integer",
+                  "example": 1
+                },
+                "status": {
+                  "type": "integer",
+                  "example": -1
+                },
+                "scheduledCron": {
+                  "type": "string",
+                  "example": "59 18 09 16 10 ? 2024"
+                },
+                "scheduledId": {
+                  "type": "null"
+                },
+                "periodicity": {
+                  "type": "boolean",
+                  "example": false
+                },
+                "periodicityTime": {
+                  "type": "null"
+                },
+                "periodicitySection": {
+                  "type": "null"
+                },
+                "periodicityType": {
+                  "type": "integer",
+                  "example": 0
+                },
+                "businessParams": {
+                  "type": "string",
+                  "example": "{\"ucenterParams\":{\"labelId\":\"1043856033672368128\"}}"
+                },
+                "nextRunTime": {
+                  "type": "null"
+                },
+                "effectiveDate": {
+                  "type": "null"
+                },
+                "expirationDate": {
+                  "type": "null"
+                },
+                "enterpriseName": {
+                  "type": "string",
+                  "example": "XJL"
+                },
+                "accountName": {
+                  "type": "string",
+                  "example": "XJL"
+                },
+                "approveStatus": {
+                  "type": "string",
+                  "example": "-1"
+                },
+                "approveMsg": {
+                  "type": "null"
+                },
+                "approveDate": {
+                  "type": "string",
+                  "example": "2024-10-16 09:21:42"
+                },
+                "tmpTag": {
+                  "type": "string",
+                  "example": "3-K3wwtDACr3eCTrstGjQKnAszz1h0zt5b"
+                },
+                "sendObj": {
+                  "type": "string",
+                  "example": "{\"type\":1,\"repeat\":false,\"inputId\":\"1043856033672368129\",\"inputTag\":[\"1016 手动输入\"],\"tmp\":\"【AI短信】自由发送 拒收请回复R\"}"
+                },
+                "billSerialNum": {
+                  "type": "null"
+                },
+                "canReRun": {
+                  "type": "boolean",
+                  "example": false
+                },
+                "runTime": {
+                  "type": "null"
+                },
+                "runResult": {
+                  "type": "null"
+                },
+                "runResultMsg": {
+                  "type": "null"
+                }
+              }
+            },
+            "example": [
+              {
+                "del": false,
+                "utime": "2024-10-16 09:21:49",
+                "ctime": "2024-10-16 09:12:22",
+                "cid": "BJS10173",
+                "cname": "XJL",
+                "uid": null,
+                "uname": null,
+                "enterpriseId": "122330",
+                "accountId": "BJS10173",
+                "id": "1043856048560054272",
+                "name": "自由发送",
+                "fromPt": 2,
+                "content": "自由发送 拒收请回复R",
+                "templateId": "1043856047280791552",
+                "planTels": 1,
+                "planMsgNum": 1,
+                "status": -1,
+                "scheduledCron": "59 18 09 16 10 ? 2024",
+                "scheduledId": null,
+                "periodicity": false,
+                "periodicityTime": null,
+                "periodicitySection": null,
+                "periodicityType": 0,
+                "businessParams": "{\"ucenterParams\":{\"labelId\":\"1043856033672368128\"}}",
+                "nextRunTime": null,
+                "effectiveDate": null,
+                "expirationDate": null,
+                "enterpriseName": "XJL",
+                "accountName": "XJL",
+                "approveStatus": "-1",
+                "approveMsg": null,
+                "approveDate": "2024-10-16 09:21:42",
+                "tmpTag": "3-K3wwtDACr3eCTrstGjQKnAszz1h0zt5b",
+                "sendObj": "{\"type\":1,\"repeat\":false,\"inputId\":\"1043856033672368129\",\"inputTag\":[\"1016 手动输入\"],\"tmp\":\"【AI短信】自由发送 拒收请回复R\"}",
+                "billSerialNum": null,
+                "canReRun": false,
+                "runTime": null,
+                "runResult": null,
+                "runResultMsg": null
+              },
+              {
+                "del": false,
+                "utime": "2024-10-15 09:58:56",
+                "ctime": "2024-10-15 09:20:32",
+                "cid": "BJS10160",
+                "cname": "PJY企业",
+                "uid": null,
+                "uname": null,
+                "enterpriseId": "122235",
+                "accountId": "BJS10160",
+                "id": "1043495718915944448",
+                "name": "111",
+                "fromPt": 2,
+                "content": "111",
+                "templateId": "1043495716982370304",
+                "planTels": 1,
+                "planMsgNum": 1,
+                "status": 1,
+                "scheduledCron": "26 27 09 15 10 ? 2024",
+                "scheduledId": null,
+                "periodicity": false,
+                "periodicityTime": null,
+                "periodicitySection": null,
+                "periodicityType": 0,
+                "businessParams": "{\"ucenterParams\":{\"labelId\":\"1043495715634958336\"}}",
+                "nextRunTime": null,
+                "effectiveDate": null,
+                "expirationDate": null,
+                "enterpriseName": "PJY企业",
+                "accountName": "PJY企业",
+                "approveStatus": "-1",
+                "approveMsg": null,
+                "approveDate": "2024-10-15 09:58:28",
+                "tmpTag": "2-2x8QeM4kdkD6MDCm6CrGEZAZFCwREE9T",
+                "sendObj": "{\"type\":1,\"repeat\":false,\"inputId\":\"1043495715634958337\",\"inputTag\":[\"1015 手动输入\"],\"tmp\":\"【PJY企业导入】111\"}",
+                "billSerialNum": null,
+                "canReRun": false,
+                "runTime": null,
+                "runResult": null,
+                "runResultMsg": null
+              }
+            ]
+          },
+          "page": {
+            "type": "object",
+            "properties": {
+              "pageSize": {
+                "type": "integer",
+                "example": 10
+              },
+              "page": {
+                "type": "integer",
+                "example": 1
+              },
+              "total": {
+                "type": "integer",
+                "example": 108
+              }
+            }
+          },
+          "requestId": {
+            "type": "string",
+            "example": "da1b864662784b7f90360b66d4e8c0ae"
+          }
+        }
+      },
+      "UnauthorizedError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 401
+          },
+          "message": {
+            "type": "string",
+            "example": "Unauthorized"
+          }
+        }
+      },
+      "HTTPValidationError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 422
+          },
+          "message": {
+            "type": "string",
+            "example": "Validation Error"
+          }
+        }
+      }
+    }
+  }
+}

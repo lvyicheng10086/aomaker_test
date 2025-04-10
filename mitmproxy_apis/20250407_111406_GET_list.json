@@ -1,0 +1,245 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Documentation for bizapi-uat.infocloud.cc",
+    "description": "自动生成的 API 文档",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/ai/client/agent/list": {
+      "get": {
+        "tags": [
+          "ai"
+        ],
+        "summary": "list",
+        "description": "捕获于 2025-04-07 11:14:06",
+        "operationId": "get_list",
+        "parameters": [
+          {
+            "name": "ids",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "86cdf4983f3f4a08843ce76c210718f0,49babbbea37b40cabd54d3a8cae9e706,4222e917e6b94c0a87f1da97d48d7290"
+            },
+            "description": "查询参数: ids"
+          },
+          {
+            "name": "TOKEN",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "5ae4b5a2-bbc6-4cc2-9e4f-76cee80707c6"
+            },
+            "description": "身份验证令牌"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功响应",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/schemas/UnauthorizedError"
+          },
+          "422": {
+            "$ref": "#/components/schemas/HTTPValidationError"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ListResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "example": 200
+          },
+          "msg": {
+            "type": "string",
+            "example": "success"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "example": "49babbbea37b40cabd54d3a8cae9e706"
+                },
+                "name": {
+                  "type": "string",
+                  "example": "AI数据查询"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "为您提供全方位的数据查询及统计分析服务"
+                },
+                "icon": {
+                  "type": "string",
+                  "example": "https://minio-uat.infocloud.cc/ai-service/19080110203420013520/f470fd69f03a464eaf8332396c97a29c-1735109760"
+                },
+                "agent_type": {
+                  "type": "string",
+                  "example": "DATA"
+                },
+                "agent_config": {
+                  "type": "object",
+                  "properties": {
+                    "model": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer",
+                          "example": 24
+                        },
+                        "model": {
+                          "type": "string",
+                          "example": "qwen-turbo-2024-11-01"
+                        },
+                        "model_provider": {
+                          "type": "string",
+                          "example": "TongyiQwen"
+                        },
+                        "api_key": {
+                          "type": "string",
+                          "example": "sk-6eb486c62f9349488fa406182a65d77b"
+                        },
+                        "temperature": {
+                          "type": "number",
+                          "example": 0.1
+                        },
+                        "top_p": {
+                          "type": "number",
+                          "example": 0.2
+                        }
+                      }
+                    },
+                    "pre_prompt": {
+                      "type": "null"
+                    },
+                    "enable_opening_statement": {
+                      "type": "boolean",
+                      "example": true
+                    },
+                    "tools": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "example": []
+                    }
+                  }
+                },
+                "created_at": {
+                  "type": "integer",
+                  "example": 1735108913
+                }
+              }
+            },
+            "example": [
+              {
+                "id": "49babbbea37b40cabd54d3a8cae9e706",
+                "name": "AI数据查询",
+                "description": "为您提供全方位的数据查询及统计分析服务",
+                "icon": "https://minio-uat.infocloud.cc/ai-service/19080110203420013520/f470fd69f03a464eaf8332396c97a29c-1735109760",
+                "agent_type": "DATA",
+                "agent_config": {
+                  "model": {
+                    "id": 24,
+                    "model": "qwen-turbo-2024-11-01",
+                    "model_provider": "TongyiQwen",
+                    "api_key": "sk-6eb486c62f9349488fa406182a65d77b",
+                    "temperature": 0.1,
+                    "top_p": 0.2
+                  },
+                  "pre_prompt": null,
+                  "enable_opening_statement": true,
+                  "tools": []
+                },
+                "created_at": 1735108913
+              },
+              {
+                "id": "86cdf4983f3f4a08843ce76c210718f0",
+                "name": "AI知识问答",
+                "description": "为您解答产品知识、平台使用及接口对接等问题",
+                "icon": "https://minio-uat.infocloud.cc/ai-service/19080110203420013520/7854e9ca10ae4662bbcc7402e0912c53-1734591923",
+                "agent_type": "RAG",
+                "agent_config": {
+                  "model": {
+                    "id": 24,
+                    "model": "qwen-turbo-latest",
+                    "model_provider": "TongyiQwen",
+                    "api_key": "sk-6eb486c62f9349488fa406182a65d77b",
+                    "mode": "chat",
+                    "temperature": 0.1,
+                    "top_p": 0.2
+                  },
+                  "pre_prompt": "你是一个知识丰富的助手，可以根据提供的文档信息回答问题。请根据上下文中的文档内容回答问题，生成一个准确、简洁且完整的答案,回答结果中不要包含思考过程。",
+                  "enable_opening_statement": true,
+                  "tools": []
+                },
+                "created_at": 1731649459
+              }
+            ]
+          },
+          "page_info": {
+            "type": "object",
+            "properties": {
+              "page": {
+                "type": "integer",
+                "example": 1
+              },
+              "page_size": {
+                "type": "integer",
+                "example": 20
+              },
+              "total": {
+                "type": "integer",
+                "example": 3
+              }
+            }
+          }
+        }
+      },
+      "UnauthorizedError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 401
+          },
+          "message": {
+            "type": "string",
+            "example": "Unauthorized"
+          }
+        }
+      },
+      "HTTPValidationError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 422
+          },
+          "message": {
+            "type": "string",
+            "example": "Validation Error"
+          }
+        }
+      }
+    }
+  }
+}

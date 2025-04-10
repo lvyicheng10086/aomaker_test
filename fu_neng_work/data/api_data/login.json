@@ -1,0 +1,272 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Documentation for sso-uat.infocloud.cc",
+    "description": "自动生成的 API 文档",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/sso/platform/login": {
+      "post": {
+        "tags": [
+          "sso"
+        ],
+        "summary": "login",
+        "description": "捕获于 2025-03-27 10:21:09",
+        "operationId": "post_login",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "成功响应",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/schemas/UnauthorizedError"
+          },
+          "422": {
+            "$ref": "#/components/schemas/HTTPValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "spCode": {
+                    "type": "string",
+                    "example": "122210"
+                  },
+                  "username": {
+                    "type": "string",
+                    "example": "PJY"
+                  },
+                  "password": {
+                    "type": "string",
+                    "example": "BZxLz0N/XOPdXLMI71XeAGqdYgGHpdr1eih6TnPZiQlIjmCk870ziAlzniMKF/DQcXL9NZxUpvApyNebqbBym4eYFSTo0+Se6wReK5vXKC92mOi5uPPykkBlGgZLVtiMci/8N+gxVCl27eSazfRclZ1YqQkGGSEUCuchA9nZHmU="
+                  },
+                  "imageVerifyCode": {
+                    "type": "string",
+                    "example": ""
+                  },
+                  "verifyCode": {
+                    "type": "string",
+                    "example": ""
+                  },
+                  "options": {
+                    "type": "object",
+                    "properties": {
+                      "accType": {
+                        "type": "null"
+                      }
+                    }
+                  },
+                  "grant_type": {
+                    "type": "string",
+                    "example": "account_config_pwd"
+                  },
+                  "accessCode": {
+                    "type": "string",
+                    "example": "zaaNf0"
+                  },
+                  "deviceId": {
+                    "type": "string",
+                    "example": "de1fbc605cd8055039835df7a9184400"
+                  },
+                  "terminalType": {
+                    "type": "string",
+                    "example": "pc"
+                  },
+                  "clientId": {
+                    "type": "string",
+                    "example": "123456789"
+                  },
+                  "identityId": {
+                    "type": "string",
+                    "example": "230512142514063911"
+                  },
+                  "siteId": {
+                    "type": "string",
+                    "example": "230907181448002716"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "LoginResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "token": {
+                "type": "string",
+                "example": "3746f450-5ca2-4c4b-8466-9f28f39dc77b"
+              },
+              "accountList": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "example": "230227193624162505"
+                    },
+                    "accountCode": {
+                      "type": "string",
+                      "example": "BJS10154"
+                    },
+                    "spId": {
+                      "type": "string",
+                      "example": "230227193624162504"
+                    },
+                    "orgId": {
+                      "type": "string",
+                      "example": ""
+                    },
+                    "name": {
+                      "type": "string",
+                      "example": "0508开户企业2"
+                    },
+                    "loginName": {
+                      "type": "string",
+                      "example": "PJY"
+                    },
+                    "mobile": {
+                      "type": "string",
+                      "example": "13699410982"
+                    },
+                    "status": {
+                      "type": "integer",
+                      "example": 1
+                    },
+                    "createrId": {
+                      "type": "string",
+                      "example": "LNI10230"
+                    },
+                    "accType": {
+                      "type": "integer",
+                      "example": 1
+                    },
+                    "spCode": {
+                      "type": "string",
+                      "example": "122210"
+                    },
+                    "realmCode": {
+                      "type": "string",
+                      "example": "64216c2ee4b0a40fdd458091PL"
+                    },
+                    "spName": {
+                      "type": "string",
+                      "example": "0508开户企业2"
+                    }
+                  }
+                },
+                "example": [
+                  {
+                    "id": "230227193624162505",
+                    "accountCode": "BJS10154",
+                    "spId": "230227193624162504",
+                    "orgId": "",
+                    "name": "0508开户企业2",
+                    "loginName": "PJY",
+                    "mobile": "13699410982",
+                    "status": 1,
+                    "createrId": "LNI10230",
+                    "accType": 1,
+                    "spCode": "122210",
+                    "realmCode": "64216c2ee4b0a40fdd458091PL",
+                    "spName": "0508开户企业2"
+                  }
+                ]
+              },
+              "locked": {
+                "type": "boolean",
+                "example": false
+              },
+              "passwordNeedUpdate": {
+                "type": "boolean",
+                "example": false
+              },
+              "firstLogin": {
+                "type": "boolean",
+                "example": false
+              },
+              "needBindAuthInfo": {
+                "type": "boolean",
+                "example": false
+              },
+              "selfErrorMsg": {
+                "type": "boolean",
+                "example": false
+              },
+              "bindFlag": {
+                "type": "boolean",
+                "example": false
+              },
+              "weakPwdFlag": {
+                "type": "boolean",
+                "example": false
+              }
+            }
+          },
+          "errcode": {
+            "type": "integer",
+            "example": 200
+          },
+          "errmsg": {
+            "type": "string",
+            "example": "OK"
+          },
+          "code": {
+            "type": "string",
+            "example": "200"
+          },
+          "msg": {
+            "type": "string",
+            "example": "OK"
+          }
+        }
+      },
+      "UnauthorizedError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 401
+          },
+          "message": {
+            "type": "string",
+            "example": "Unauthorized"
+          }
+        }
+      },
+      "HTTPValidationError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 422
+          },
+          "message": {
+            "type": "string",
+            "example": "Validation Error"
+          }
+        }
+      }
+    }
+  }
+}

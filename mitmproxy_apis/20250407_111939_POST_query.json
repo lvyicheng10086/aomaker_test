@@ -1,0 +1,250 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Documentation for jfapi-uat.infocloud.cc",
+    "description": "自动生成的 API 文档",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/illegal/sms/thesaurus/query": {
+      "post": {
+        "tags": [
+          "illegal"
+        ],
+        "summary": "query",
+        "description": "捕获于 2025-04-07 11:19:39",
+        "operationId": "post_query",
+        "parameters": [
+          {
+            "name": "TOKEN",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "603681e8-ba5b-4437-84cf-3804b315e8ee"
+            },
+            "description": "身份验证令牌"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功响应",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/schemas/UnauthorizedError"
+          },
+          "422": {
+            "$ref": "#/components/schemas/HTTPValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "page": {
+                    "type": "integer",
+                    "example": 1
+                  },
+                  "pageSize": {
+                    "type": "integer",
+                    "example": 10
+                  },
+                  "params": {
+                    "type": "object",
+                    "properties": {
+                      "where": {
+                        "type": "string",
+                        "example": ""
+                      },
+                      "sort": {
+                        "type": "string",
+                        "example": "ctime.desc"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "QueryResponse": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 200
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "del": {
+                  "type": "boolean",
+                  "example": false
+                },
+                "utime": {
+                  "type": "null"
+                },
+                "ctime": {
+                  "type": "string",
+                  "example": "2024-08-14 10:21:15"
+                },
+                "cid": {
+                  "type": "string",
+                  "example": "2019065782"
+                },
+                "cname": {
+                  "type": "string",
+                  "example": "吕亮"
+                },
+                "uid": {
+                  "type": "null"
+                },
+                "uname": {
+                  "type": "null"
+                },
+                "enterpriseId": {
+                  "type": "null"
+                },
+                "accountId": {
+                  "type": "null"
+                },
+                "id": {
+                  "type": "string",
+                  "example": "1021042951081963520"
+                },
+                "name": {
+                  "type": "string",
+                  "example": "ceshi"
+                },
+                "describe": {
+                  "type": "null"
+                },
+                "state": {
+                  "type": "boolean",
+                  "example": true
+                },
+                "invalidEnterprise": {
+                  "type": "null"
+                },
+                "effectRange": {
+                  "type": "integer",
+                  "example": 0
+                },
+                "effectEnterprise": {
+                  "type": "null"
+                },
+                "wordsNum": {
+                  "type": "null"
+                }
+              }
+            },
+            "example": [
+              {
+                "del": false,
+                "utime": null,
+                "ctime": "2024-08-14 10:21:15",
+                "cid": "2019065782",
+                "cname": "吕亮",
+                "uid": null,
+                "uname": null,
+                "enterpriseId": null,
+                "accountId": null,
+                "id": "1021042951081963520",
+                "name": "ceshi",
+                "describe": null,
+                "state": true,
+                "invalidEnterprise": null,
+                "effectRange": 0,
+                "effectEnterprise": null,
+                "wordsNum": null
+              },
+              {
+                "del": false,
+                "utime": null,
+                "ctime": "2024-08-14 10:15:35",
+                "cid": "2019065782",
+                "cname": "吕亮",
+                "uid": null,
+                "uname": null,
+                "enterpriseId": null,
+                "accountId": null,
+                "id": "1021041525194764288",
+                "name": "pjy",
+                "describe": null,
+                "state": true,
+                "invalidEnterprise": null,
+                "effectRange": 0,
+                "effectEnterprise": null,
+                "wordsNum": 1
+              }
+            ]
+          },
+          "page": {
+            "type": "object",
+            "properties": {
+              "pageSize": {
+                "type": "integer",
+                "example": 10
+              },
+              "page": {
+                "type": "integer",
+                "example": 1
+              },
+              "total": {
+                "type": "integer",
+                "example": 16
+              }
+            }
+          },
+          "requestId": {
+            "type": "string",
+            "example": "97e5413385e740c491d58e980d81cac7"
+          }
+        }
+      },
+      "UnauthorizedError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 401
+          },
+          "message": {
+            "type": "string",
+            "example": "Unauthorized"
+          }
+        }
+      },
+      "HTTPValidationError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 422
+          },
+          "message": {
+            "type": "string",
+            "example": "Validation Error"
+          }
+        }
+      }
+    }
+  }
+}

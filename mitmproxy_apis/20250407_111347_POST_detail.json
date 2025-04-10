@@ -1,0 +1,352 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Documentation for sso-uat.infocloud.com.cn",
+    "description": "自动生成的 API 文档",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/sso/platform/auth-config-sp/detail": {
+      "post": {
+        "tags": [
+          "sso"
+        ],
+        "summary": "detail",
+        "description": "捕获于 2025-04-07 11:13:47",
+        "operationId": "post_detail",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "成功响应",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DetailResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/schemas/UnauthorizedError"
+          },
+          "422": {
+            "$ref": "#/components/schemas/HTTPValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "example": "230512142514000076"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "DetailResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "example": "230512142514000076"
+              },
+              "spId": {
+                "type": "string",
+                "example": "230227193624000183"
+              },
+              "spCode": {
+                "type": "null"
+              },
+              "loginMethod": {
+                "type": "string",
+                "example": "6,7"
+              },
+              "faceRecognition": {
+                "type": "integer",
+                "example": 0
+              },
+              "fingerprintIdentification": {
+                "type": "integer",
+                "example": 0
+              },
+              "weChatAuthentication": {
+                "type": "integer",
+                "example": 0
+              },
+              "nailCertification": {
+                "type": "integer",
+                "example": 0
+              },
+              "threeNetAuthentication": {
+                "type": "integer",
+                "example": 0
+              },
+              "securityConfig": {
+                "type": "object",
+                "properties": {
+                  "tokenPeriod": {
+                    "type": "integer",
+                    "example": 400
+                  },
+                  "pwdMaxNumOfErrors": {
+                    "type": "integer",
+                    "example": 5
+                  },
+                  "pwdLockTimeWhenMaxErrors": {
+                    "type": "integer",
+                    "example": 10
+                  },
+                  "periodChangePwd": {
+                    "type": "integer",
+                    "example": 1
+                  },
+                  "periodChangePwdInterval": {
+                    "type": "integer",
+                    "example": 15
+                  },
+                  "multiTerminalLoginSameTime": {
+                    "type": "integer",
+                    "example": 1
+                  },
+                  "sameTerminalLoginSameTime": {
+                    "type": "integer",
+                    "example": 1
+                  },
+                  "firstLoginVerify": {
+                    "type": "integer",
+                    "example": 0
+                  },
+                  "firstLoginChangePwd": {
+                    "type": "integer",
+                    "example": 1
+                  },
+                  "deviceEffectiveTime": {
+                    "type": "null"
+                  }
+                }
+              },
+              "createAccountCode": {
+                "type": "string",
+                "example": "SCS10054"
+              },
+              "createTime": {
+                "type": "string",
+                "example": "2023-06-13T07:11:14.921+00:00"
+              },
+              "creatorId": {
+                "type": "null"
+              },
+              "updateTime": {
+                "type": "string",
+                "example": "2024-10-12T08:50:25.951+00:00"
+              },
+              "lastModifiedBy": {
+                "type": "null"
+              },
+              "deleted": {
+                "type": "boolean",
+                "example": false
+              },
+              "clientId": {
+                "type": "string",
+                "example": "123456789"
+              },
+              "accountCode": {
+                "type": "null"
+              },
+              "name": {
+                "type": "string",
+                "example": "jf-2.0-test"
+              },
+              "icon": {
+                "type": "null"
+              },
+              "terminalType": {
+                "type": "string",
+                "example": "pc"
+              },
+              "domain": {
+                "type": "null"
+              },
+              "loginUrl": {
+                "type": "null"
+              },
+              "defaultLoginType": {
+                "type": "null"
+              },
+              "signMethod": {
+                "type": "null"
+              },
+              "loginCallbackUrl": {
+                "type": "string",
+                "example": "https://jf-helperep-uat.infocloud.cc/#/overview/index"
+              },
+              "logoutCallbackUrl": {
+                "type": "string",
+                "example": "https://jf-helperep-uat.infocloud.cc/#/login"
+              },
+              "backgroundImageUrl": {
+                "type": "null"
+              },
+              "backImgMiddleUrl": {
+                "type": "null"
+              },
+              "logoUrl": {
+                "type": "null"
+              },
+              "themeColor": {
+                "type": "null"
+              },
+              "licenseEnable": {
+                "type": "null"
+              },
+              "licenses": {
+                "type": "null"
+              },
+              "siteType": {
+                "type": "null"
+              },
+              "siteCopy": {
+                "type": "null"
+              },
+              "clientType": {
+                "type": "null"
+              },
+              "filingInfo": {
+                "type": "null"
+              },
+              "centerTempId": {
+                "type": "null"
+              },
+              "description": {
+                "type": "string",
+                "example": "经分2.0测试"
+              },
+              "realmCode": {
+                "type": "string",
+                "example": "64216c2ee4b0a40fdd458091PL"
+              },
+              "ssoServerUrl": {
+                "type": "string",
+                "example": "https://mp-uat.infocloud.cc"
+              },
+              "weChatSisIdList": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "example": []
+              },
+              "sourceType": {
+                "type": "null"
+              },
+              "personLoginMethod": {
+                "type": "string",
+                "example": ""
+              },
+              "defaultLoginMethod": {
+                "type": "integer",
+                "example": 1
+              },
+              "openBindAuthInfo": {
+                "type": "null"
+              },
+              "originalCopyId": {
+                "type": "null"
+              },
+              "methodNameMap": {
+                "type": "object",
+                "properties": {
+                  "1": {
+                    "type": "string",
+                    "example": "企业账号"
+                  },
+                  "2": {
+                    "type": "string",
+                    "example": "个人账号"
+                  }
+                }
+              },
+              "wpsSisIdList": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "example": []
+              },
+              "unicomCloudSisIdList": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "example": []
+              },
+              "autoGenUser": {
+                "type": "null"
+              },
+              "defaultRoleIdList": {
+                "type": "null"
+              }
+            }
+          },
+          "errcode": {
+            "type": "integer",
+            "example": 200
+          },
+          "errmsg": {
+            "type": "string",
+            "example": "OK"
+          },
+          "code": {
+            "type": "string",
+            "example": "200"
+          },
+          "msg": {
+            "type": "string",
+            "example": "OK"
+          }
+        }
+      },
+      "UnauthorizedError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 401
+          },
+          "message": {
+            "type": "string",
+            "example": "Unauthorized"
+          }
+        }
+      },
+      "HTTPValidationError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 422
+          },
+          "message": {
+            "type": "string",
+            "example": "Validation Error"
+          }
+        }
+      }
+    }
+  }
+}

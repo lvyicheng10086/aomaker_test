@@ -1,0 +1,12 @@
+2025-04-01 17:49:33 Starting new HTTPS connection (1): sso-uat.infocloud.cc:443
+2025-04-01 17:49:33 https://sso-uat.infocloud.cc:443 "POST /sso/platform/login/info/get-by-token HTTP/1.1" 200 None
+2025-04-01 17:49:33 [logging_middleware._process_log_outputs:143]-[INFO]:
+====================================================================================================
+🅰️ <API>: PostGetByTokenAPI 捕获于 2025-03-27 10:21:10
+🚀 <Request>
+     URL: https://sso-uat.infocloud.cc/sso/platform/login/info/get-by-token
+     Method: POST
+     Request Json: {'token': '100707f7-5987-4504-8e0e-e1388ded29c8'}
+✅ <Response>
+     Response Body: 
+====================================================================================================

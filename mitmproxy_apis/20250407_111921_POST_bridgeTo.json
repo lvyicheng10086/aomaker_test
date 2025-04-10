@@ -1,0 +1,139 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Documentation for bizapi-uat.infocloud.com.cn",
+    "description": "自动生成的 API 文档",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/sheet-v2/api/sheet/DataSheet/bridgeTo": {
+      "post": {
+        "tags": [
+          "sheet-v2"
+        ],
+        "summary": "bridgeTo",
+        "description": "捕获于 2025-04-07 11:19:21",
+        "operationId": "post_bridgeTo",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "成功响应",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BridgetoResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/schemas/UnauthorizedError"
+          },
+          "422": {
+            "$ref": "#/components/schemas/HTTPValidationError"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BridgetoResponse": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 200
+          },
+          "errmsg": {
+            "type": "string",
+            "example": "OK"
+          },
+          "transformTime": {
+            "type": "integer",
+            "example": 1743995870276
+          },
+          "data": {
+            "type": "string",
+            "example": "oOr="
+          },
+          "page": {
+            "type": "object",
+            "properties": {
+              "totalCalculate": {
+                "type": "integer",
+                "example": 0
+              },
+              "total": {
+                "type": "integer",
+                "example": 0
+              },
+              "sort": {
+                "type": "string",
+                "example": "createTime"
+              },
+              "dir": {
+                "type": "string",
+                "example": "DESC"
+              },
+              "hint": {
+                "type": "null"
+              },
+              "page": {
+                "type": "integer",
+                "example": 1
+              },
+              "pageSize": {
+                "type": "integer",
+                "example": 999
+              },
+              "pageMode": {
+                "type": "boolean",
+                "example": true
+              },
+              "mongoSort": {
+                "type": "object",
+                "properties": {
+                  "createTime": {
+                    "type": "integer",
+                    "example": -1
+                  }
+                }
+              },
+              "orderBy": {
+                "type": "string",
+                "example": "createTime DESC"
+              }
+            }
+          }
+        }
+      },
+      "UnauthorizedError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 401
+          },
+          "message": {
+            "type": "string",
+            "example": "Unauthorized"
+          }
+        }
+      },
+      "HTTPValidationError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 422
+          },
+          "message": {
+            "type": "string",
+            "example": "Validation Error"
+          }
+        }
+      }
+    }
+  }
+}

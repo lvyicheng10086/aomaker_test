@@ -1,0 +1,176 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Documentation for jfapi-uat.infocloud.com.cn",
+    "description": "自动生成的 API 文档",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/ep/v2/sms/template/variable/all": {
+      "get": {
+        "tags": [
+          "ep"
+        ],
+        "summary": "all",
+        "description": "捕获于 2025-04-07 11:18:59",
+        "operationId": "get_all",
+        "parameters": [
+          {
+            "name": "TOKEN",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "5ae4b5a2-bbc6-4cc2-9e4f-76cee80707c6"
+            },
+            "description": "身份验证令牌"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功响应",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AllResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/schemas/UnauthorizedError"
+          },
+          "422": {
+            "$ref": "#/components/schemas/HTTPValidationError"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AllResponse": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 200
+          },
+          "errmsg": {
+            "type": "string",
+            "example": "操作成功"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "del": {
+                  "type": "boolean",
+                  "example": false
+                },
+                "utime": {
+                  "type": "string",
+                  "example": "2025-02-20 12:16:56"
+                },
+                "ctime": {
+                  "type": "string",
+                  "example": "2024-06-06 14:19:11"
+                },
+                "cid": {
+                  "type": "string",
+                  "example": "BJS10154"
+                },
+                "cname": {
+                  "type": "string",
+                  "example": "0508开户企业"
+                },
+                "uid": {
+                  "type": "null"
+                },
+                "uname": {
+                  "type": "null"
+                },
+                "enterpriseId": {
+                  "type": "string",
+                  "example": "122210"
+                },
+                "accountId": {
+                  "type": "string",
+                  "example": "BJS10154"
+                },
+                "id": {
+                  "type": "string",
+                  "example": "996098069172871168"
+                },
+                "name": {
+                  "type": "string",
+                  "example": "大变量"
+                },
+                "length": {
+                  "type": "integer",
+                  "example": 1000
+                },
+                "dataType": {
+                  "type": "string",
+                  "example": "input"
+                },
+                "ruleJson": {
+                  "type": "null"
+                }
+              }
+            },
+            "example": [
+              {
+                "del": false,
+                "utime": "2025-02-20 12:16:56",
+                "ctime": "2024-06-06 14:19:11",
+                "cid": "BJS10154",
+                "cname": "0508开户企业",
+                "uid": null,
+                "uname": null,
+                "enterpriseId": "122210",
+                "accountId": "BJS10154",
+                "id": "996098069172871168",
+                "name": "大变量",
+                "length": 1000,
+                "dataType": "input",
+                "ruleJson": null
+              }
+            ]
+          },
+          "requestId": {
+            "type": "string",
+            "example": "cd50d93beaea4725865528615a1dafa4"
+          }
+        }
+      },
+      "UnauthorizedError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 401
+          },
+          "message": {
+            "type": "string",
+            "example": "Unauthorized"
+          }
+        }
+      },
+      "HTTPValidationError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 422
+          },
+          "message": {
+            "type": "string",
+            "example": "Validation Error"
+          }
+        }
+      }
+    }
+  }
+}

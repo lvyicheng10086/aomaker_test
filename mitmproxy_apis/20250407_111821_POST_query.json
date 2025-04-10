@@ -1,0 +1,389 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Documentation for jfapi-uat.infocloud.com.cn",
+    "description": "自动生成的 API 文档",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/ep/v2/sms/template/query": {
+      "post": {
+        "tags": [
+          "ep"
+        ],
+        "summary": "query",
+        "description": "捕获于 2025-04-07 11:18:21",
+        "operationId": "post_query",
+        "parameters": [
+          {
+            "name": "TOKEN",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "5ae4b5a2-bbc6-4cc2-9e4f-76cee80707c6"
+            },
+            "description": "身份验证令牌"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功响应",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/schemas/UnauthorizedError"
+          },
+          "422": {
+            "$ref": "#/components/schemas/HTTPValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "page": {
+                    "type": "integer",
+                    "example": 1
+                  },
+                  "pageSize": {
+                    "type": "integer",
+                    "example": 5
+                  },
+                  "total": {
+                    "type": "integer",
+                    "example": 0
+                  },
+                  "params": {
+                    "type": "object",
+                    "properties": {
+                      "where": {
+                        "type": "string",
+                        "example": "subject=='627ZOABJ'  and businessType=out=(2,4) and status==2 and notCheckAuthType!=true"
+                      },
+                      "sort": {
+                        "type": "string",
+                        "example": "ctime.desc"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "QueryResponse": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 200
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "del": {
+                  "type": "boolean",
+                  "example": false
+                },
+                "ctime": {
+                  "type": "string",
+                  "example": "2025-04-07 11:13:41"
+                },
+                "cid": {
+                  "type": "string",
+                  "example": "BJS10154"
+                },
+                "cname": {
+                  "type": "string",
+                  "example": "0508开户企业2"
+                },
+                "enterpriseId": {
+                  "type": "string",
+                  "example": "122210"
+                },
+                "accountId": {
+                  "type": "string",
+                  "example": "BJS10154"
+                },
+                "id": {
+                  "type": "string",
+                  "example": "1106579682240237568"
+                },
+                "enterpriseName": {
+                  "type": "string",
+                  "example": "0508开户企业2"
+                },
+                "name": {
+                  "type": "string",
+                  "example": "自动化测试-通知类-模板"
+                },
+                "template": {
+                  "type": "string",
+                  "example": "通知类模板发送"
+                },
+                "businessType": {
+                  "type": "integer",
+                  "example": 1
+                },
+                "signatureId": {
+                  "type": "string",
+                  "example": "1106579655988621312"
+                },
+                "signature": {
+                  "type": "string",
+                  "example": "【通知类模板-中云】"
+                },
+                "wordNumber": {
+                  "type": "integer",
+                  "example": 7
+                },
+                "useNumber": {
+                  "type": "integer",
+                  "example": 0
+                },
+                "status": {
+                  "type": "integer",
+                  "example": 2
+                },
+                "auditUid": {
+                  "type": "string",
+                  "example": "0"
+                },
+                "auditUname": {
+                  "type": "string",
+                  "example": "admin"
+                },
+                "auditReason": {
+                  "type": "string",
+                  "example": "系统免审"
+                },
+                "objId": {
+                  "type": "string",
+                  "example": "2-JxNnpcyCD3AiBmTRw7FkreCfAGkRbaeY"
+                },
+                "subject": {
+                  "type": "string",
+                  "example": "627ZOABJ"
+                },
+                "templateParams": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "paramId": {
+                        "type": "string",
+                        "example": "1"
+                      },
+                      "paramVal": {
+                        "type": "string",
+                        "example": "[00:00,23:59]"
+                      },
+                      "type": {
+                        "type": "integer",
+                        "example": 1
+                      },
+                      "name": {
+                        "type": "string",
+                        "example": "发送时间限制"
+                      }
+                    }
+                  },
+                  "example": [
+                    {
+                      "paramId": "1",
+                      "paramVal": "[00:00,23:59]",
+                      "type": 1,
+                      "name": "发送时间限制"
+                    },
+                    {
+                      "paramId": "2",
+                      "paramVal": "(0,99999980]",
+                      "type": 0,
+                      "name": "发送总人数"
+                    }
+                  ]
+                }
+              }
+            },
+            "example": [
+              {
+                "del": false,
+                "ctime": "2025-04-07 11:13:41",
+                "cid": "BJS10154",
+                "cname": "0508开户企业2",
+                "enterpriseId": "122210",
+                "accountId": "BJS10154",
+                "id": "1106579682240237568",
+                "enterpriseName": "0508开户企业2",
+                "name": "自动化测试-通知类-模板",
+                "template": "通知类模板发送",
+                "businessType": 1,
+                "signatureId": "1106579655988621312",
+                "signature": "【通知类模板-中云】",
+                "wordNumber": 7,
+                "useNumber": 0,
+                "status": 2,
+                "auditUid": "0",
+                "auditUname": "admin",
+                "auditReason": "系统免审",
+                "objId": "2-JxNnpcyCD3AiBmTRw7FkreCfAGkRbaeY",
+                "subject": "627ZOABJ",
+                "templateParams": [
+                  {
+                    "paramId": "1",
+                    "paramVal": "[00:00,23:59]",
+                    "type": 1,
+                    "name": "发送时间限制"
+                  },
+                  {
+                    "paramId": "2",
+                    "paramVal": "(0,99999980]",
+                    "type": 0,
+                    "name": "发送总人数"
+                  },
+                  {
+                    "paramId": "3",
+                    "paramVal": "(0,99996]",
+                    "type": 0,
+                    "name": "日发送频次"
+                  },
+                  {
+                    "paramId": "4",
+                    "paramVal": "(0,99]",
+                    "type": 0,
+                    "name": "同一号码相同内容24小时总发送次数限制"
+                  },
+                  {
+                    "paramId": "5",
+                    "paramVal": "(0,999999]",
+                    "type": 0,
+                    "name": "同一号码24小时总发送次数限制"
+                  }
+                ]
+              },
+              {
+                "del": false,
+                "ctime": "2025-04-02 13:55:41",
+                "cid": "BJS10154",
+                "cname": "0508开户企业2",
+                "enterpriseId": "122210",
+                "accountId": "BJS10154",
+                "id": "1104808512329887744",
+                "enterpriseName": "0508开户企业2",
+                "name": "自动化测试",
+                "template": "常量发送",
+                "businessType": 1,
+                "signatureId": "1104808429511249920",
+                "signature": "【自动化测试签名】",
+                "wordNumber": 4,
+                "useNumber": 0,
+                "status": 2,
+                "auditUid": "0",
+                "auditUname": "admin",
+                "auditReason": "系统免审",
+                "objId": "2-KKJaszkYdAtb1jzhAZDBDMD2B3E910Aj",
+                "subject": "627ZOABJ",
+                "templateParams": [
+                  {
+                    "paramId": "1",
+                    "paramVal": "[00:00,23:59]",
+                    "type": 1,
+                    "name": "发送时间限制"
+                  },
+                  {
+                    "paramId": "2",
+                    "paramVal": "(0,99999980]",
+                    "type": 0,
+                    "name": "发送总人数"
+                  },
+                  {
+                    "paramId": "3",
+                    "paramVal": "(0,99996]",
+                    "type": 0,
+                    "name": "日发送频次"
+                  },
+                  {
+                    "paramId": "4",
+                    "paramVal": "(0,99]",
+                    "type": 0,
+                    "name": "同一号码相同内容24小时总发送次数限制"
+                  },
+                  {
+                    "paramId": "5",
+                    "paramVal": "(0,999999]",
+                    "type": 0,
+                    "name": "同一号码24小时总发送次数限制"
+                  }
+                ]
+              }
+            ]
+          },
+          "page": {
+            "type": "object",
+            "properties": {
+              "pageSize": {
+                "type": "integer",
+                "example": 5
+              },
+              "page": {
+                "type": "integer",
+                "example": 1
+              },
+              "total": {
+                "type": "integer",
+                "example": 7
+              }
+            }
+          },
+          "requestId": {
+            "type": "string",
+            "example": "5269be8609714183b66d03d19411195e"
+          }
+        }
+      },
+      "UnauthorizedError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 401
+          },
+          "message": {
+            "type": "string",
+            "example": "Unauthorized"
+          }
+        }
+      },
+      "HTTPValidationError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 422
+          },
+          "message": {
+            "type": "string",
+            "example": "Validation Error"
+          }
+        }
+      }
+    }
+  }
+}

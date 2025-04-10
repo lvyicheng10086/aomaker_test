@@ -1,0 +1,208 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Documentation for jfapi-uat.infocloud.com.cn",
+    "description": "自动生成的 API 文档",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/ep/notice/query": {
+      "post": {
+        "tags": [
+          "ep"
+        ],
+        "summary": "query",
+        "description": "捕获于 2025-04-07 11:14:05",
+        "operationId": "post_query",
+        "parameters": [
+          {
+            "name": "TOKEN",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "5ae4b5a2-bbc6-4cc2-9e4f-76cee80707c6"
+            },
+            "description": "身份验证令牌"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功响应",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/schemas/UnauthorizedError"
+          },
+          "422": {
+            "$ref": "#/components/schemas/HTTPValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "page": {
+                    "type": "integer",
+                    "example": 1
+                  },
+                  "pageSize": {
+                    "type": "integer",
+                    "example": 999
+                  },
+                  "typeList": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "example": [
+                      "jf_2_pc"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "QueryResponse": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 200
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "del": {
+                  "type": "boolean",
+                  "example": false
+                },
+                "ctime": {
+                  "type": "string",
+                  "example": "2025-03-17 17:46:16"
+                },
+                "cid": {
+                  "type": "string",
+                  "example": "556209"
+                },
+                "cname": {
+                  "type": "string",
+                  "example": "u13699410982"
+                },
+                "id": {
+                  "type": "string",
+                  "example": "1099068336765460480"
+                },
+                "theme": {
+                  "type": "string",
+                  "example": "公告"
+                },
+                "content": {
+                  "type": "string",
+                  "example": "<p>尊敬的客户，鉴于近期运营商开始严格管理短信签名，可能造成之前报备的短信签名失效。如果遇到了短信无法发送出去的情况，请及时与平台联系。我们将对签名进行审查，并对失效的签名重新报备。<br/>对于此次调整给您带来的不便，平台致以诚挚的歉意！我们承诺将尽快联系运营商，完成签名报备的工作。</p>"
+                },
+                "beginTime": {
+                  "type": "string",
+                  "example": "2025-03-17 00:00:00"
+                },
+                "endTime": {
+                  "type": "string",
+                  "example": "2025-04-30 00:00:00"
+                },
+                "typeList": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "example": [
+                    "jf_2_pc"
+                  ]
+                }
+              }
+            },
+            "example": [
+              {
+                "del": false,
+                "ctime": "2025-03-17 17:46:16",
+                "cid": "556209",
+                "cname": "u13699410982",
+                "id": "1099068336765460480",
+                "theme": "公告",
+                "content": "<p>尊敬的客户，鉴于近期运营商开始严格管理短信签名，可能造成之前报备的短信签名失效。如果遇到了短信无法发送出去的情况，请及时与平台联系。我们将对签名进行审查，并对失效的签名重新报备。<br/>对于此次调整给您带来的不便，平台致以诚挚的歉意！我们承诺将尽快联系运营商，完成签名报备的工作。</p>",
+                "beginTime": "2025-03-17 00:00:00",
+                "endTime": "2025-04-30 00:00:00",
+                "typeList": [
+                  "jf_2_pc"
+                ]
+              }
+            ]
+          },
+          "page": {
+            "type": "object",
+            "properties": {
+              "pageSize": {
+                "type": "integer",
+                "example": 999
+              },
+              "page": {
+                "type": "integer",
+                "example": 1
+              },
+              "total": {
+                "type": "integer",
+                "example": 1
+              }
+            }
+          },
+          "requestId": {
+            "type": "string",
+            "example": "16438ead0543416c884fe44b94b82ce7"
+          }
+        }
+      },
+      "UnauthorizedError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 401
+          },
+          "message": {
+            "type": "string",
+            "example": "Unauthorized"
+          }
+        }
+      },
+      "HTTPValidationError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 422
+          },
+          "message": {
+            "type": "string",
+            "example": "Validation Error"
+          }
+        }
+      }
+    }
+  }
+}

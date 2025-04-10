@@ -1,0 +1,365 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Documentation for jfapi-uat.infocloud.cc",
+    "description": "自动生成的 API 文档",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/op/task/query": {
+      "post": {
+        "tags": [
+          "op"
+        ],
+        "summary": "query",
+        "description": "捕获于 2025-04-07 11:19:47",
+        "operationId": "post_query",
+        "parameters": [
+          {
+            "name": "TOKEN",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "603681e8-ba5b-4437-84cf-3804b315e8ee"
+            },
+            "description": "身份验证令牌"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功响应",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/schemas/UnauthorizedError"
+          },
+          "422": {
+            "$ref": "#/components/schemas/HTTPValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "page": {
+                    "type": "integer",
+                    "example": 1
+                  },
+                  "pageSize": {
+                    "type": "integer",
+                    "example": 10
+                  },
+                  "params": {
+                    "type": "object",
+                    "properties": {
+                      "where": {
+                        "type": "string",
+                        "example": "ctime=between=('2025-04-07 00:00:00','2025-04-07 23:59:59') and approveStatus=in=(1,2,-1)"
+                      },
+                      "sort": {
+                        "type": "string",
+                        "example": "id.desc"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "QueryResponse": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 200
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "del": {
+                  "type": "boolean",
+                  "example": false
+                },
+                "ctime": {
+                  "type": "string",
+                  "example": "2025-04-07 11:17:21"
+                },
+                "cid": {
+                  "type": "string",
+                  "example": "BJS10154"
+                },
+                "cname": {
+                  "type": "string",
+                  "example": "0508开户企业2"
+                },
+                "enterpriseId": {
+                  "type": "string",
+                  "example": "122210"
+                },
+                "accountId": {
+                  "type": "string",
+                  "example": "BJS10154"
+                },
+                "approveStatus": {
+                  "type": "string",
+                  "example": "2"
+                },
+                "approveUid": {
+                  "type": "string",
+                  "example": "556209"
+                },
+                "approveUname": {
+                  "type": "string",
+                  "example": "吕亮"
+                },
+                "approveDate": {
+                  "type": "string",
+                  "example": "2025-04-07 11:18:14"
+                },
+                "id": {
+                  "type": "string",
+                  "example": "1106580606308323328"
+                },
+                "theme": {
+                  "type": "string",
+                  "example": "自定义发送"
+                },
+                "content": {
+                  "type": "string",
+                  "example": "【111】123"
+                },
+                "templateId": {
+                  "type": "string",
+                  "example": "1106580605234581504"
+                },
+                "senderNum": {
+                  "type": "integer",
+                  "example": 1
+                },
+                "sendMsgNum": {
+                  "type": "integer",
+                  "example": 1
+                },
+                "batchSend": {
+                  "type": "boolean",
+                  "example": true
+                },
+                "taskType": {
+                  "type": "integer",
+                  "example": 0
+                },
+                "status": {
+                  "type": "integer",
+                  "example": 2
+                },
+                "channelType": {
+                  "type": "integer",
+                  "example": 1
+                },
+                "businessType": {
+                  "type": "integer",
+                  "example": 1
+                },
+                "scheduled": {
+                  "type": "string",
+                  "example": "0"
+                },
+                "scheduledStatus": {
+                  "type": "integer",
+                  "example": 1
+                },
+                "srcMode": {
+                  "type": "integer",
+                  "example": 2
+                },
+                "cmppAccount": {
+                  "type": "string",
+                  "example": ""
+                },
+                "enterpriseName": {
+                  "type": "string",
+                  "example": "0508开户企业2"
+                },
+                "accountName": {
+                  "type": "string",
+                  "example": "0508开户企业2"
+                },
+                "summary": {
+                  "type": "boolean",
+                  "example": false
+                },
+                "day": {
+                  "type": "integer",
+                  "example": 20250407
+                },
+                "month": {
+                  "type": "integer",
+                  "example": 202504
+                },
+                "tmpTag": {
+                  "type": "string",
+                  "example": ""
+                },
+                "sendObj": {
+                  "type": "string",
+                  "example": ""
+                },
+                "unicomNum": {
+                  "type": "integer",
+                  "example": 0
+                },
+                "telecomNum": {
+                  "type": "integer",
+                  "example": 0
+                },
+                "moveNum": {
+                  "type": "integer",
+                  "example": 0
+                },
+                "sendSucMsgNum": {
+                  "type": "integer",
+                  "example": 0
+                },
+                "sendFailedMsgNum": {
+                  "type": "integer",
+                  "example": 0
+                },
+                "receiptNum": {
+                  "type": "integer",
+                  "example": 0
+                },
+                "unicomReceiptNum": {
+                  "type": "integer",
+                  "example": 0
+                },
+                "telecomReceiptNum": {
+                  "type": "integer",
+                  "example": 0
+                },
+                "moveReceiptNum": {
+                  "type": "integer",
+                  "example": 0
+                },
+                "failNum": {
+                  "type": "integer",
+                  "example": 0
+                }
+              }
+            },
+            "example": [
+              {
+                "del": false,
+                "ctime": "2025-04-07 11:17:21",
+                "cid": "BJS10154",
+                "cname": "0508开户企业2",
+                "enterpriseId": "122210",
+                "accountId": "BJS10154",
+                "approveStatus": "2",
+                "approveUid": "556209",
+                "approveUname": "吕亮",
+                "approveDate": "2025-04-07 11:18:14",
+                "id": "1106580606308323328",
+                "theme": "自定义发送",
+                "content": "【111】123",
+                "templateId": "1106580605234581504",
+                "senderNum": 1,
+                "sendMsgNum": 1,
+                "batchSend": true,
+                "taskType": 0,
+                "status": 2,
+                "channelType": 1,
+                "businessType": 1,
+                "scheduled": "0",
+                "scheduledStatus": 1,
+                "srcMode": 2,
+                "cmppAccount": "",
+                "enterpriseName": "0508开户企业2",
+                "accountName": "0508开户企业2",
+                "summary": false,
+                "day": 20250407,
+                "month": 202504,
+                "tmpTag": "",
+                "sendObj": "",
+                "unicomNum": 0,
+                "telecomNum": 0,
+                "moveNum": 0,
+                "sendSucMsgNum": 0,
+                "sendFailedMsgNum": 0,
+                "receiptNum": 0,
+                "unicomReceiptNum": 0,
+                "telecomReceiptNum": 0,
+                "moveReceiptNum": 0,
+                "failNum": 0
+              }
+            ]
+          },
+          "page": {
+            "type": "object",
+            "properties": {
+              "pageSize": {
+                "type": "integer",
+                "example": 10
+              },
+              "page": {
+                "type": "integer",
+                "example": 1
+              },
+              "total": {
+                "type": "integer",
+                "example": 1
+              }
+            }
+          },
+          "requestId": {
+            "type": "string",
+            "example": "2df7a2ccf59541a085da5405d77f7bb9"
+          }
+        }
+      },
+      "UnauthorizedError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 401
+          },
+          "message": {
+            "type": "string",
+            "example": "Unauthorized"
+          }
+        }
+      },
+      "HTTPValidationError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 422
+          },
+          "message": {
+            "type": "string",
+            "example": "Validation Error"
+          }
+        }
+      }
+    }
+  }
+}

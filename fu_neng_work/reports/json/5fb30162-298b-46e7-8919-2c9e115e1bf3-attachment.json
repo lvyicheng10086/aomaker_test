@@ -1,0 +1,15 @@
+{
+  "request": {
+    "url": "https://sso-uat.infocloud.cc/sso/platform/login/info/get-by-token",
+    "method": "POST",
+    "params": null,
+    "data": null,
+    "json": {
+      "token": "100707f7-5987-4504-8e0e-e1388ded29c8"
+    }
+  },
+  "response": {
+    "status_code": 200,
+    "body": null
+  }
+}

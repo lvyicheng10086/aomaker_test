@@ -1,0 +1,170 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Documentation for bizapi-uat.infocloud.com.cn",
+    "description": "自动生成的 API 文档",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/sheet-v2/api/sheet/AuthingCache/queryById": {
+      "post": {
+        "tags": [
+          "sheet-v2"
+        ],
+        "summary": "queryById",
+        "description": "捕获于 2025-04-07 11:13:58",
+        "operationId": "post_queryById",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "成功响应",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QuerybyidResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/schemas/UnauthorizedError"
+          },
+          "422": {
+            "$ref": "#/components/schemas/HTTPValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "example": "vfb3Cj1PvHg5EQB_"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "QuerybyidResponse": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 200
+          },
+          "errmsg": {
+            "type": "string",
+            "example": "OK"
+          },
+          "transformTime": {
+            "type": "integer",
+            "example": 1743995546663
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "_id": {
+                "type": "string",
+                "example": "vfb3Cj1PvHg5EQB_"
+              },
+              "appId": {
+                "type": "string",
+                "example": "230512142514000076"
+              },
+              "appHost": {
+                "type": "string",
+                "example": "https://{group}-uat.infocloud.com.cn"
+              },
+              "sheetAPI": {
+                "type": "string",
+                "example": "https://bizapi-uat.infocloud.com.cn/sheet-v2/"
+              },
+              "siteName": {
+                "type": "string",
+                "example": "经分助手"
+              },
+              "siteLogo": {
+                "type": "string",
+                "example": "data:image/png;base64,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"
+              },
+              "authId": {
+                "type": "string",
+                "example": "8AZkgGsJJX_URuLD"
+              },
+              "serverUrl": {
+                "type": "string",
+                "example": "https://mp-uat.infocloud.cc"
+              },
+              "ssoServerUrl": {
+                "type": "string",
+                "example": "https://mp-uat.infocloud.cc"
+              },
+              "loginCallbackUrl": {
+                "type": "string",
+                "example": "https://jf-helperep-uat.infocloud.cc/#/overview/index"
+              },
+              "logoutCallbackUrl": {
+                "type": "string",
+                "example": "https://jf-helperep-uat.infocloud.cc/#/login"
+              },
+              "token": {
+                "type": "string",
+                "example": "5ae4b5a2-bbc6-4cc2-9e4f-76cee80707c6"
+              },
+              "createTime": {
+                "type": "integer",
+                "example": 1743995542216
+              },
+              "updateTime": {
+                "type": "integer",
+                "example": 1743995542216
+              },
+              "enable": {
+                "type": "integer",
+                "example": 0
+              }
+            }
+          },
+          "page": {
+            "type": "null"
+          }
+        }
+      },
+      "UnauthorizedError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 401
+          },
+          "message": {
+            "type": "string",
+            "example": "Unauthorized"
+          }
+        }
+      },
+      "HTTPValidationError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 422
+          },
+          "message": {
+            "type": "string",
+            "example": "Validation Error"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,249 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Documentation for jf-opapi-uat.infocloud.com.cn",
+    "description": "自动生成的 API 文档",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/ep/sms/dashboard/query": {
+      "get": {
+        "tags": [
+          "ep"
+        ],
+        "summary": "query",
+        "description": "捕获于 2025-04-07 11:14:05",
+        "operationId": "get_query",
+        "parameters": [
+          {
+            "name": "startDay",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "20250308"
+            },
+            "description": "查询参数: startDay"
+          },
+          {
+            "name": "endDay",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "20250406"
+            },
+            "description": "查询参数: endDay"
+          },
+          {
+            "name": "dateType",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "3"
+            },
+            "description": "查询参数: dateType"
+          },
+          {
+            "name": "TOKEN",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "5ae4b5a2-bbc6-4cc2-9e4f-76cee80707c6"
+            },
+            "description": "身份验证令牌"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功响应",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/schemas/UnauthorizedError"
+          },
+          "422": {
+            "$ref": "#/components/schemas/HTTPValidationError"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "QueryResponse": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 200
+          },
+          "errmsg": {
+            "type": "string",
+            "example": "操作成功"
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "taskSubmitTotal": {
+                "type": "object",
+                "properties": {
+                  "num": {
+                    "type": "string",
+                    "example": "0"
+                  },
+                  "mom": {
+                    "type": "number",
+                    "example": 100.0
+                  }
+                }
+              },
+              "taskSubmitSuccess": {
+                "type": "object",
+                "properties": {
+                  "num": {
+                    "type": "string",
+                    "example": "0"
+                  },
+                  "mom": {
+                    "type": "number",
+                    "example": 100.0
+                  }
+                }
+              },
+              "taskSubmitFail": {
+                "type": "object",
+                "properties": {
+                  "num": {
+                    "type": "string",
+                    "example": "0"
+                  },
+                  "mom": {
+                    "type": "number",
+                    "example": 100.0
+                  }
+                }
+              },
+              "uses": {
+                "type": "object",
+                "properties": {
+                  "num": {
+                    "type": "string",
+                    "example": "0"
+                  },
+                  "mom": {
+                    "type": "number",
+                    "example": 100.0
+                  }
+                }
+              },
+              "smsSubmitSuccess": {
+                "type": "object",
+                "properties": {
+                  "num": {
+                    "type": "string",
+                    "example": "0"
+                  },
+                  "mom": {
+                    "type": "number",
+                    "example": 100.0
+                  }
+                }
+              },
+              "smsSubmitFail": {
+                "type": "object",
+                "properties": {
+                  "num": {
+                    "type": "string",
+                    "example": "0"
+                  },
+                  "mom": {
+                    "type": "number",
+                    "example": 100.0
+                  }
+                }
+              },
+              "smsArriveSuccess": {
+                "type": "object",
+                "properties": {
+                  "num": {
+                    "type": "string",
+                    "example": "0"
+                  },
+                  "mom": {
+                    "type": "number",
+                    "example": 100.0
+                  }
+                }
+              },
+              "smsArriveFail": {
+                "type": "object",
+                "properties": {
+                  "num": {
+                    "type": "string",
+                    "example": "0"
+                  },
+                  "mom": {
+                    "type": "number",
+                    "example": 100.0
+                  }
+                }
+              },
+              "smsUnRepeat": {
+                "type": "object",
+                "properties": {
+                  "num": {
+                    "type": "string",
+                    "example": "0"
+                  },
+                  "mom": {
+                    "type": "number",
+                    "example": 100.0
+                  }
+                }
+              }
+            }
+          },
+          "requestId": {
+            "type": "string",
+            "example": "c7ec5672-bc26-4cfb-a4bd-ef77693d1ff4"
+          }
+        }
+      },
+      "UnauthorizedError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 401
+          },
+          "message": {
+            "type": "string",
+            "example": "Unauthorized"
+          }
+        }
+      },
+      "HTTPValidationError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 422
+          },
+          "message": {
+            "type": "string",
+            "example": "Validation Error"
+          }
+        }
+      }
+    }
+  }
+}

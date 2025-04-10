@@ -1,0 +1,242 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Documentation for sso-uat.infocloud.com.cn",
+    "description": "自动生成的 API 文档",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/sso/platform/login/info/get-by-token": {
+      "post": {
+        "tags": [
+          "sso"
+        ],
+        "summary": "get-by-token",
+        "description": "捕获于 2025-04-07 11:14:06",
+        "operationId": "post_get-by-token",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "成功响应",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetByTokenResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/schemas/UnauthorizedError"
+          },
+          "422": {
+            "$ref": "#/components/schemas/HTTPValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "token": {
+                    "type": "string",
+                    "example": "5ae4b5a2-bbc6-4cc2-9e4f-76cee80707c6"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "GetByTokenResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "userId": {
+                "type": "null"
+              },
+              "userName": {
+                "type": "string",
+                "example": "PJY"
+              },
+              "name": {
+                "type": "null"
+              },
+              "memberId": {
+                "type": "null"
+              },
+              "accountInfo": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "example": "230227193624162505"
+                  },
+                  "accountCode": {
+                    "type": "string",
+                    "example": "BJS10154"
+                  },
+                  "spId": {
+                    "type": "string",
+                    "example": "230227193624162504"
+                  },
+                  "orgId": {
+                    "type": "string",
+                    "example": ""
+                  },
+                  "name": {
+                    "type": "string",
+                    "example": "0508开户企业2"
+                  },
+                  "loginName": {
+                    "type": "string",
+                    "example": "PJY"
+                  },
+                  "mobile": {
+                    "type": "string",
+                    "example": "13699410982"
+                  },
+                  "email": {
+                    "type": "null"
+                  },
+                  "memberId": {
+                    "type": "null"
+                  },
+                  "status": {
+                    "type": "integer",
+                    "example": 1
+                  },
+                  "createrId": {
+                    "type": "string",
+                    "example": "LNI10230"
+                  },
+                  "accType": {
+                    "type": "integer",
+                    "example": 1
+                  },
+                  "spCode": {
+                    "type": "string",
+                    "example": "122210"
+                  },
+                  "realmCode": {
+                    "type": "string",
+                    "example": "64216c2ee4b0a40fdd458091PL"
+                  },
+                  "spName": {
+                    "type": "string",
+                    "example": "0508开户企业2"
+                  }
+                }
+              },
+              "terminalType": {
+                "type": "string",
+                "example": "pc"
+              },
+              "identityId": {
+                "type": "string",
+                "example": "230512142514000076"
+              },
+              "mobile": {
+                "type": "null"
+              },
+              "clientId": {
+                "type": "string",
+                "example": "123456789"
+              },
+              "token": {
+                "type": "string",
+                "example": "5ae4b5a2-bbc6-4cc2-9e4f-76cee80707c6"
+              },
+              "renew": {
+                "type": "boolean",
+                "example": true
+              },
+              "ttl": {
+                "type": "integer",
+                "example": 24000
+              },
+              "timeRatio": {
+                "type": "number",
+                "example": 0.5
+              },
+              "grant_type": {
+                "type": "string",
+                "example": "account_config_pwd"
+              },
+              "operator": {
+                "type": "string",
+                "example": "BJS10154"
+              },
+              "expiration": {
+                "type": "string",
+                "example": "2025-04-07T09:50:52.767+00:00"
+              },
+              "sessionId": {
+                "type": "string",
+                "example": "b5c90e6e2ee04b21b345b4b3644e4248"
+              },
+              "spId": {
+                "type": "string",
+                "example": "230227193624162504"
+              },
+              "spName": {
+                "type": "string",
+                "example": "0508开户企业2"
+              }
+            }
+          },
+          "errcode": {
+            "type": "integer",
+            "example": 200
+          },
+          "errmsg": {
+            "type": "string",
+            "example": "OK"
+          },
+          "code": {
+            "type": "string",
+            "example": "200"
+          },
+          "msg": {
+            "type": "string",
+            "example": "OK"
+          }
+        }
+      },
+      "UnauthorizedError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 401
+          },
+          "message": {
+            "type": "string",
+            "example": "Unauthorized"
+          }
+        }
+      },
+      "HTTPValidationError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 422
+          },
+          "message": {
+            "type": "string",
+            "example": "Validation Error"
+          }
+        }
+      }
+    }
+  }
+}

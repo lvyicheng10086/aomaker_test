@@ -1,0 +1,166 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Documentation for jfapi-uat.infocloud.cc",
+    "description": "自动生成的 API 文档",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/sys/login": {
+      "post": {
+        "tags": [
+          "sys"
+        ],
+        "summary": "login",
+        "description": "捕获于 2025-04-07 11:19:39",
+        "operationId": "post_login",
+        "parameters": [
+          {
+            "name": "TOKEN",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "undefined"
+            },
+            "description": "身份验证令牌"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功响应",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/schemas/UnauthorizedError"
+          },
+          "422": {
+            "$ref": "#/components/schemas/HTTPValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "userName": {
+                    "type": "string",
+                    "example": "13699410982"
+                  },
+                  "password": {
+                    "type": "string",
+                    "example": "Aa@12345678%"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "LoginResponse": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 200
+          },
+          "msg": {
+            "type": "string",
+            "example": "请求成功"
+          },
+          "code": {
+            "type": "integer",
+            "example": 200
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "memberId": {
+                "type": "string",
+                "example": "2019065782"
+              },
+              "memberName": {
+                "type": "string",
+                "example": "吕亮"
+              },
+              "userId": {
+                "type": "string",
+                "example": "556209"
+              },
+              "userName": {
+                "type": "string",
+                "example": "吕亮"
+              },
+              "spId": {
+                "type": "string",
+                "example": "21012018282020011927"
+              },
+              "mobile": {
+                "type": "string",
+                "example": "13699410982"
+              },
+              "name": {
+                "type": "string",
+                "example": "吕亮"
+              },
+              "groupIds": {
+                "type": "null"
+              },
+              "qrUrl": {
+                "type": "null"
+              },
+              "updatePasswordTime": {
+                "type": "null"
+              },
+              "token": {
+                "type": "string",
+                "example": "603681e8-ba5b-4437-84cf-3804b315e8ee"
+              },
+              "contactId": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      },
+      "UnauthorizedError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 401
+          },
+          "message": {
+            "type": "string",
+            "example": "Unauthorized"
+          }
+        }
+      },
+      "HTTPValidationError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 422
+          },
+          "message": {
+            "type": "string",
+            "example": "Validation Error"
+          }
+        }
+      }
+    }
+  }
+}

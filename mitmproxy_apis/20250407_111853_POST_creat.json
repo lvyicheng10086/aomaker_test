@@ -1,0 +1,149 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Documentation for jf-marketepapi-uat.infocloud.com.cn",
+    "description": "自动生成的 API 文档",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/ep/sms/task/creat": {
+      "post": {
+        "tags": [
+          "ep"
+        ],
+        "summary": "creat",
+        "description": "捕获于 2025-04-07 11:18:53",
+        "operationId": "post_creat",
+        "parameters": [
+          {
+            "name": "TOKEN",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "5ae4b5a2-bbc6-4cc2-9e4f-76cee80707c6"
+            },
+            "description": "身份验证令牌"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功响应",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreatResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/schemas/UnauthorizedError"
+          },
+          "422": {
+            "$ref": "#/components/schemas/HTTPValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "them": {
+                    "type": "string",
+                    "example": "自定义发送"
+                  },
+                  "tid": {
+                    "type": "string",
+                    "example": "1106580588389273600"
+                  },
+                  "sendMsgNum": {
+                    "type": "integer",
+                    "example": 1
+                  },
+                  "senderNum": {
+                    "type": "integer",
+                    "example": 1
+                  },
+                  "type": {
+                    "type": "integer",
+                    "example": 1
+                  },
+                  "sendObj": {
+                    "type": "string",
+                    "example": "{\"type\":1,\"repeat\":false,\"inputId\":\"1106580588389273601\",\"inputTag\":[\"0407 手动输入\"],\"tmp\":\"【111】123\"}"
+                  },
+                  "tmpTag": {
+                    "type": "string",
+                    "example": "2-a1TCeRTr5pGNzfeGXZKrd2PZS9F2Zcr1"
+                  },
+                  "businessType": {
+                    "type": "integer",
+                    "example": 1
+                  },
+                  "signatureId": {
+                    "type": "string",
+                    "example": "985626159416356864"
+                  },
+                  "content": {
+                    "type": "string",
+                    "example": "123"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CreatResponse": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 200
+          },
+          "data": {
+            "type": "string",
+            "example": "1106580606308323328"
+          },
+          "requestId": {
+            "type": "string",
+            "example": "7768e389-1fb3-4b6a-a6a8-838291d718b7"
+          }
+        }
+      },
+      "UnauthorizedError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 401
+          },
+          "message": {
+            "type": "string",
+            "example": "Unauthorized"
+          }
+        }
+      },
+      "HTTPValidationError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 422
+          },
+          "message": {
+            "type": "string",
+            "example": "Validation Error"
+          }
+        }
+      }
+    }
+  }
+}

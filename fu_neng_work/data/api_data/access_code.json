@@ -1,0 +1,96 @@
+{
+  "openapi": "3.1.0",
+  "paths": {
+    "/sso/platform/user/access_code": {
+      "get": {
+        "tags": ["authentication"],
+        "summary": "获取访问码",
+        "description": "获取用于登录的访问码",
+        "operationId": "get_access_code",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": ["login"],
+              "example": "login"
+            },
+            "description": "认证类型"
+          },
+          {
+            "name": "TOKEN",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "身份验证令牌"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功响应",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccessCodeResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/schemas/UnauthorizedError"
+          },
+          "422": {
+            "$ref": "#/components/schemas/HTTPValidationError"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AccessCodeResponse": {
+        "type": "object",
+        "properties": {
+          "ret_code": {
+            "type": "integer",
+            "example": 200
+          },
+          "message": {
+            "type": "string",
+            "example": "OK"
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "accessCode": {
+                "type": "string",
+                "example": "5XBSmu"
+              },
+              "expireTime": {
+                "type": "integer",
+                "example": 60
+              }
+            }
+          }
+        }
+      },
+      "UnauthorizedError": {
+        "type": "object",
+        "properties": {
+          "ret_code": {
+            "type": "integer",
+            "example": 401
+          },
+          "message": {
+            "type": "string",
+            "example": "Unauthorized"
+          }
+        }
+      }
+    }
+  }
+}

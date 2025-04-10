@@ -1,0 +1,345 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Documentation for jfapi-uat.infocloud.com.cn",
+    "description": "自动生成的 API 文档",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/ep/v2/sms/template/paramsList": {
+      "get": {
+        "tags": [
+          "ep"
+        ],
+        "summary": "paramsList",
+        "description": "捕获于 2025-04-07 11:15:06",
+        "operationId": "get_paramsList",
+        "parameters": [
+          {
+            "name": "TOKEN",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "5ae4b5a2-bbc6-4cc2-9e4f-76cee80707c6"
+            },
+            "description": "身份验证令牌"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功响应",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ParamslistResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/schemas/UnauthorizedError"
+          },
+          "422": {
+            "$ref": "#/components/schemas/HTTPValidationError"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ParamslistResponse": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 200
+          },
+          "errmsg": {
+            "type": "string",
+            "example": "操作成功"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "del": {
+                  "type": "boolean",
+                  "example": false
+                },
+                "utime": {
+                  "type": "string",
+                  "example": "2024-05-28 16:31:43"
+                },
+                "ctime": {
+                  "type": "string",
+                  "example": "2021-02-19 11:56:45"
+                },
+                "uid": {
+                  "type": "string",
+                  "example": "2019065782"
+                },
+                "uname": {
+                  "type": "string",
+                  "example": "吕亮"
+                },
+                "id": {
+                  "type": "string",
+                  "example": "1"
+                },
+                "businessType": {
+                  "type": "integer",
+                  "example": 1
+                },
+                "businessTypeName": {
+                  "type": "string",
+                  "example": "行业"
+                },
+                "resourceType": {
+                  "type": "string",
+                  "example": "1"
+                },
+                "templateParams": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "del": {
+                        "type": "boolean",
+                        "example": false
+                      },
+                      "utime": {
+                        "type": "null"
+                      },
+                      "ctime": {
+                        "type": "null"
+                      },
+                      "id": {
+                        "type": "string",
+                        "example": "1"
+                      },
+                      "name": {
+                        "type": "string",
+                        "example": "发送时间限制"
+                      },
+                      "limitRange": {
+                        "type": "string",
+                        "example": "[00:00,23:59]"
+                      },
+                      "defaultRange": {
+                        "type": "string",
+                        "example": "[00:00,23:59]"
+                      },
+                      "type": {
+                        "type": "integer",
+                        "example": 1
+                      },
+                      "spel": {
+                        "type": "string",
+                        "example": "#cur between {#min,#max}"
+                      }
+                    }
+                  },
+                  "example": [
+                    {
+                      "del": false,
+                      "utime": null,
+                      "ctime": null,
+                      "id": "1",
+                      "name": "发送时间限制",
+                      "limitRange": "[00:00,23:59]",
+                      "defaultRange": "[00:00,23:59]",
+                      "type": 1,
+                      "spel": "#cur between {#min,#max}"
+                    },
+                    {
+                      "del": false,
+                      "utime": null,
+                      "ctime": null,
+                      "id": "2",
+                      "name": "发送总人数",
+                      "limitRange": "(0,99999999]",
+                      "defaultRange": "(0,99999980)",
+                      "type": 0,
+                      "spel": "#cur between {#min,#max}"
+                    }
+                  ]
+                }
+              }
+            },
+            "example": [
+              {
+                "del": false,
+                "utime": "2024-05-28 16:31:43",
+                "ctime": "2021-02-19 11:56:45",
+                "uid": "2019065782",
+                "uname": "吕亮",
+                "id": "1",
+                "businessType": 1,
+                "businessTypeName": "行业",
+                "resourceType": "1",
+                "templateParams": [
+                  {
+                    "del": false,
+                    "utime": null,
+                    "ctime": null,
+                    "id": "1",
+                    "name": "发送时间限制",
+                    "limitRange": "[00:00,23:59]",
+                    "defaultRange": "[00:00,23:59]",
+                    "type": 1,
+                    "spel": "#cur between {#min,#max}"
+                  },
+                  {
+                    "del": false,
+                    "utime": null,
+                    "ctime": null,
+                    "id": "2",
+                    "name": "发送总人数",
+                    "limitRange": "(0,99999999]",
+                    "defaultRange": "(0,99999980)",
+                    "type": 0,
+                    "spel": "#cur between {#min,#max}"
+                  },
+                  {
+                    "del": false,
+                    "utime": null,
+                    "ctime": null,
+                    "id": "3",
+                    "name": "日发送频次",
+                    "limitRange": "(0,9999996)",
+                    "defaultRange": "(0,99996)",
+                    "type": 0,
+                    "spel": "#cur between {#min,#max}"
+                  },
+                  {
+                    "del": false,
+                    "utime": null,
+                    "ctime": null,
+                    "id": "4",
+                    "name": "同一号码相同内容24小时总发送次数限制",
+                    "limitRange": "(0,99]",
+                    "defaultRange": "(0,99]",
+                    "type": 0,
+                    "spel": "#cur between {#min,#max}"
+                  },
+                  {
+                    "del": false,
+                    "utime": null,
+                    "ctime": null,
+                    "id": "5",
+                    "name": "同一号码24小时总发送次数限制",
+                    "limitRange": "(0,999999]",
+                    "defaultRange": "(0,999999]",
+                    "type": 0,
+                    "spel": "#cur between {#min,#max}"
+                  }
+                ]
+              },
+              {
+                "del": false,
+                "utime": "2023-12-22 17:24:00",
+                "ctime": "2021-02-19 11:56:45",
+                "uid": "2019064819",
+                "uname": "王明波",
+                "id": "2",
+                "businessType": 2,
+                "businessTypeName": "会员",
+                "resourceType": "1",
+                "templateParams": [
+                  {
+                    "del": false,
+                    "utime": null,
+                    "ctime": null,
+                    "id": "1",
+                    "name": "发送时间限制",
+                    "limitRange": "[00:13,22:00]",
+                    "defaultRange": "[00:19,22:00]",
+                    "type": 1,
+                    "spel": "#cur between {#min,#max}"
+                  },
+                  {
+                    "del": false,
+                    "utime": null,
+                    "ctime": null,
+                    "id": "2",
+                    "name": "发送总人数",
+                    "limitRange": "(0,100]",
+                    "defaultRange": "(0,100]",
+                    "type": 0,
+                    "spel": "#cur between {#min,#max}"
+                  },
+                  {
+                    "del": false,
+                    "utime": null,
+                    "ctime": null,
+                    "id": "3",
+                    "name": "日发送频次",
+                    "limitRange": "(0,999]",
+                    "defaultRange": "(0,999]",
+                    "type": 0,
+                    "spel": "#cur between {#min,#max}"
+                  },
+                  {
+                    "del": false,
+                    "utime": null,
+                    "ctime": null,
+                    "id": "4",
+                    "name": "同一号码相同内容24小时总发送次数限制",
+                    "limitRange": "(0,19]",
+                    "defaultRange": "(0,18]",
+                    "type": 0,
+                    "spel": "#cur between {#min,#max}"
+                  },
+                  {
+                    "del": false,
+                    "utime": null,
+                    "ctime": null,
+                    "id": "5",
+                    "name": "同一号码24小时总发送次数限制",
+                    "limitRange": "(0,999999]",
+                    "defaultRange": "(0,999999]",
+                    "type": 0,
+                    "spel": "#cur between {#min,#max}"
+                  }
+                ]
+              }
+            ]
+          },
+          "requestId": {
+            "type": "string",
+            "example": "d3522734e1394c6ba12d8a0aa52153e1"
+          }
+        }
+      },
+      "UnauthorizedError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 401
+          },
+          "message": {
+            "type": "string",
+            "example": "Unauthorized"
+          }
+        }
+      },
+      "HTTPValidationError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 422
+          },
+          "message": {
+            "type": "string",
+            "example": "Validation Error"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,253 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Documentation for bizapi-uat.infocloud.cc",
+    "description": "自动生成的 API 文档",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/login/site/query-login-config-by-domain": {
+      "get": {
+        "tags": [
+          "login"
+        ],
+        "summary": "query-login-config-by-domain",
+        "description": "捕获于 2025-04-07 11:14:05",
+        "operationId": "get_query-login-config-by-domain",
+        "parameters": [
+          {
+            "name": "domain",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "aiask-uat.infocloud.cc"
+            },
+            "description": "查询参数: domain"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功响应",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryLoginConfigByDomainResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/schemas/UnauthorizedError"
+          },
+          "422": {
+            "$ref": "#/components/schemas/HTTPValidationError"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "QueryLoginConfigByDomainResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "example": 200
+          },
+          "message": {
+            "type": "string",
+            "example": "成功"
+          },
+          "dataCount": {
+            "type": "null"
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "example": "230907181448004570"
+              },
+              "clientId": {
+                "type": "null"
+              },
+              "accountCode": {
+                "type": "null"
+              },
+              "name": {
+                "type": "string",
+                "example": "企业知识助手"
+              },
+              "icon": {
+                "type": "null"
+              },
+              "terminalType": {
+                "type": "null"
+              },
+              "domain": {
+                "type": "string",
+                "example": "aiask-uat.infocloud.cc"
+              },
+              "loginUrl": {
+                "type": "null"
+              },
+              "loginMethod": {
+                "type": "null"
+              },
+              "defaultLoginType": {
+                "type": "null"
+              },
+              "signMethod": {
+                "type": "null"
+              },
+              "loginCallbackUrl": {
+                "type": "null"
+              },
+              "logoutCallbackUrl": {
+                "type": "null"
+              },
+              "backgroundImageUrl": {
+                "type": "string",
+                "example": "https://bizapi-uat.infocloud.com.cn/sheet-v2/api/fs/f/250331AMIO29Sixr1UkUgzmRWqQ0y.png"
+              },
+              "backImgMiddleUrl": {
+                "type": "string",
+                "example": ""
+              },
+              "logoUrl": {
+                "type": "string",
+                "example": "https://bizapi-uat.infocloud.com.cn/sheet-v2/api/fs/f/250331AMIO29Sixr1UkUgzmMtdQ0x.png"
+              },
+              "themeColor": {
+                "type": "string",
+                "example": "#1968FC"
+              },
+              "licenseEnable": {
+                "type": "null"
+              },
+              "licenses": {
+                "type": "null"
+              },
+              "createAccountCode": {
+                "type": "null"
+              },
+              "siteType": {
+                "type": "string",
+                "example": "portal_site"
+              },
+              "spId": {
+                "type": "string",
+                "example": ""
+              },
+              "siteCopy": {
+                "type": "null"
+              },
+              "clientType": {
+                "type": "null"
+              },
+              "filingInfo": {
+                "type": "string",
+                "example": ""
+              },
+              "subDomainEnabled": {
+                "type": "boolean",
+                "example": false
+              },
+              "subDomainList": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "example": []
+              },
+              "authConfigId": {
+                "type": "string",
+                "example": "230512142514122682"
+              },
+              "faceRecognition": {
+                "type": "null"
+              },
+              "fingerprintIdentification": {
+                "type": "null"
+              },
+              "weChatAuthentication": {
+                "type": "null"
+              },
+              "nailCertification": {
+                "type": "null"
+              },
+              "threeNetAuthentication": {
+                "type": "null"
+              },
+              "centerTempId": {
+                "type": "null"
+              },
+              "configMarkId": {
+                "type": "null"
+              },
+              "spCode": {
+                "type": "string",
+                "example": ""
+              },
+              "layoutType": {
+                "type": "null"
+              },
+              "logoGateUrl": {
+                "type": "string",
+                "example": ""
+              },
+              "sourceId": {
+                "type": "null"
+              },
+              "productCode": {
+                "type": "null"
+              },
+              "authCode": {
+                "type": "null"
+              }
+            }
+          },
+          "errcode": {
+            "type": "integer",
+            "example": 200
+          },
+          "errmsg": {
+            "type": "string",
+            "example": "成功"
+          },
+          "nextCursor": {
+            "type": "null"
+          }
+        }
+      },
+      "UnauthorizedError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 401
+          },
+          "message": {
+            "type": "string",
+            "example": "Unauthorized"
+          }
+        }
+      },
+      "HTTPValidationError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 422
+          },
+          "message": {
+            "type": "string",
+            "example": "Validation Error"
+          }
+        }
+      }
+    }
+  }
+}

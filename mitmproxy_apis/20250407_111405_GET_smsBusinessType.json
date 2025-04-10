@@ -1,0 +1,143 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Documentation for jf-opapi-uat.infocloud.com.cn",
+    "description": "自动生成的 API 文档",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/ep/data/smsBusinessType": {
+      "get": {
+        "tags": [
+          "ep"
+        ],
+        "summary": "smsBusinessType",
+        "description": "捕获于 2025-04-07 11:14:05",
+        "operationId": "get_smsBusinessType",
+        "parameters": [
+          {
+            "name": "startDay",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "20250308"
+            },
+            "description": "查询参数: startDay"
+          },
+          {
+            "name": "endDay",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "20250406"
+            },
+            "description": "查询参数: endDay"
+          },
+          {
+            "name": "TOKEN",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "5ae4b5a2-bbc6-4cc2-9e4f-76cee80707c6"
+            },
+            "description": "身份验证令牌"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功响应",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmsbusinesstypeResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/schemas/UnauthorizedError"
+          },
+          "422": {
+            "$ref": "#/components/schemas/HTTPValidationError"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "SmsbusinesstypeResponse": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 200
+          },
+          "errmsg": {
+            "type": "string",
+            "example": "操作成功"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "example": "1"
+                },
+                "num": {
+                  "type": "string",
+                  "example": "0"
+                }
+              }
+            },
+            "example": [
+              {
+                "type": "1",
+                "num": "0"
+              },
+              {
+                "type": "2",
+                "num": "0"
+              }
+            ]
+          },
+          "requestId": {
+            "type": "string",
+            "example": "523b3fa7-57c8-4e03-9940-53f17af8d777"
+          }
+        }
+      },
+      "UnauthorizedError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 401
+          },
+          "message": {
+            "type": "string",
+            "example": "Unauthorized"
+          }
+        }
+      },
+      "HTTPValidationError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 422
+          },
+          "message": {
+            "type": "string",
+            "example": "Validation Error"
+          }
+        }
+      }
+    }
+  }
+}

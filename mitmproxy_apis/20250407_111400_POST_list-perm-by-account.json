@@ -1,0 +1,346 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Documentation for api-uat.infocloud.com.cn",
+    "description": "自动生成的 API 文档",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/auth/permission/v5/list-perm-by-account": {
+      "post": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "list-perm-by-account",
+        "description": "捕获于 2025-04-07 11:14:00",
+        "operationId": "post_list-perm-by-account",
+        "parameters": [
+          {
+            "name": "TOKEN",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "5ae4b5a2-bbc6-4cc2-9e4f-76cee80707c6"
+            },
+            "description": "身份验证令牌"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功响应",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListPermByAccountResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/schemas/UnauthorizedError"
+          },
+          "422": {
+            "$ref": "#/components/schemas/HTTPValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "accountCode": {
+                    "type": "string",
+                    "example": "BJS10154"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ListPermByAccountResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "example": 200
+          },
+          "message": {
+            "type": "string",
+            "example": "成功"
+          },
+          "dataCount": {
+            "type": "null"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "resourceName": {
+                  "type": "string",
+                  "example": "请假申请"
+                },
+                "type": {
+                  "type": "string",
+                  "example": "front"
+                },
+                "effect": {
+                  "type": "string",
+                  "example": "allow"
+                },
+                "resourceCode": {
+                  "type": "string",
+                  "example": "esIA001636:as1831944785881477120:sp1831944850345574400"
+                },
+                "formKey": {
+                  "type": "string",
+                  "example": "sp1831944850345574400"
+                },
+                "actions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "example": [
+                    "addData",
+                    "manualAddData"
+                  ]
+                },
+                "resourceType": {
+                  "type": "string",
+                  "example": "product"
+                },
+                "fileds": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "actionCode": {
+                        "type": "string",
+                        "example": "u12ax520087j"
+                      },
+                      "actionAttrList": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "example": [
+                          "formShow",
+                          "formEdit"
+                        ]
+                      }
+                    }
+                  },
+                  "example": [
+                    {
+                      "actionCode": "u12ax520087j",
+                      "actionAttrList": [
+                        "formShow",
+                        "formEdit",
+                        "listShow"
+                      ]
+                    },
+                    {
+                      "actionCode": "nctsn6vl2dpoStart",
+                      "actionAttrList": [
+                        "formShow",
+                        "formEdit",
+                        "listShow"
+                      ]
+                    }
+                  ]
+                },
+                "dataInfos": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "dataCode": {
+                        "type": "string",
+                        "example": "*"
+                      },
+                      "orCondition": {
+                        "type": "null"
+                      }
+                    }
+                  },
+                  "example": [
+                    {
+                      "dataCode": "*",
+                      "orCondition": null
+                    }
+                  ]
+                },
+                "perActions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "example": []
+                }
+              }
+            },
+            "example": [
+              {
+                "resourceName": "请假申请",
+                "type": "front",
+                "effect": "allow",
+                "resourceCode": "esIA001636:as1831944785881477120:sp1831944850345574400",
+                "formKey": "sp1831944850345574400",
+                "actions": [
+                  "addData",
+                  "manualAddData",
+                  "deleteData"
+                ],
+                "resourceType": "product",
+                "fileds": [
+                  {
+                    "actionCode": "u12ax520087j",
+                    "actionAttrList": [
+                      "formShow",
+                      "formEdit",
+                      "listShow"
+                    ]
+                  },
+                  {
+                    "actionCode": "nctsn6vl2dpoStart",
+                    "actionAttrList": [
+                      "formShow",
+                      "formEdit",
+                      "listShow"
+                    ]
+                  },
+                  {
+                    "actionCode": "createTime",
+                    "actionAttrList": [
+                      "formShow",
+                      "formEdit",
+                      "listShow"
+                    ]
+                  },
+                  {
+                    "actionCode": "u8ps34qpqs18",
+                    "actionAttrList": [
+                      "formShow",
+                      "formEdit",
+                      "listShow"
+                    ]
+                  },
+                  {
+                    "actionCode": "nctsn6vl2dpoEnd",
+                    "actionAttrList": [
+                      "formShow",
+                      "formEdit",
+                      "listShow"
+                    ]
+                  },
+                  {
+                    "actionCode": "mobile",
+                    "actionAttrList": [
+                      "formShow",
+                      "formEdit",
+                      "listShow"
+                    ]
+                  },
+                  {
+                    "actionCode": "updateTime",
+                    "actionAttrList": [
+                      "formShow",
+                      "formEdit",
+                      "listShow"
+                    ]
+                  },
+                  {
+                    "actionCode": "flowProcessStatus",
+                    "actionAttrList": [
+                      "formShow",
+                      "formEdit",
+                      "listShow"
+                    ]
+                  },
+                  {
+                    "actionCode": "username",
+                    "actionAttrList": [
+                      "formShow",
+                      "formEdit",
+                      "listShow"
+                    ]
+                  }
+                ],
+                "dataInfos": [
+                  {
+                    "dataCode": "*",
+                    "orCondition": null
+                  }
+                ],
+                "perActions": []
+              },
+              {
+                "resourceName": "模板管理",
+                "type": "front",
+                "effect": "allow",
+                "resourceCode": "esIA001528:as1830440997144244224:sp1830440996844093440",
+                "formKey": "",
+                "actions": [],
+                "resourceType": "product",
+                "fileds": [],
+                "dataInfos": [
+                  {
+                    "dataCode": "*",
+                    "orCondition": null
+                  }
+                ],
+                "perActions": []
+              }
+            ]
+          },
+          "errcode": {
+            "type": "integer",
+            "example": 200
+          },
+          "errmsg": {
+            "type": "string",
+            "example": "成功"
+          },
+          "nextCursor": {
+            "type": "null"
+          }
+        }
+      },
+      "UnauthorizedError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 401
+          },
+          "message": {
+            "type": "string",
+            "example": "Unauthorized"
+          }
+        }
+      },
+      "HTTPValidationError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 422
+          },
+          "message": {
+            "type": "string",
+            "example": "Validation Error"
+          }
+        }
+      }
+    }
+  }
+}

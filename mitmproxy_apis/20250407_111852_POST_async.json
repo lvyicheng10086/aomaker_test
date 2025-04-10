@@ -1,0 +1,364 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Documentation for bizapi-uat.infocloud.com.cn",
+    "description": "自动生成的 API 文档",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/sheet-v2/collect/async": {
+      "post": {
+        "tags": [
+          "sheet-v2"
+        ],
+        "summary": "async",
+        "description": "捕获于 2025-04-07 11:18:52",
+        "operationId": "post_async",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "成功响应",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AsyncResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/schemas/UnauthorizedError"
+          },
+          "422": {
+            "$ref": "#/components/schemas/HTTPValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "_dataList_": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "spId": {
+                          "type": "string",
+                          "example": "230227193624162504"
+                        },
+                        "memberId": {
+                          "type": "null"
+                        },
+                        "submitMemberId": {
+                          "type": "null"
+                        },
+                        "spCode_0": {
+                          "type": "string",
+                          "example": "230227193624162504"
+                        },
+                        "sceneCode_0": {
+                          "type": "string",
+                          "example": "1bhTcVtTQyWNe3nvgWw3bjZW"
+                        },
+                        "tagType_1": {
+                          "type": "string",
+                          "example": "-1"
+                        },
+                        "accountCode_0": {
+                          "type": "string",
+                          "example": "BJS10154"
+                        },
+                        "cateName_0": {
+                          "type": "string",
+                          "example": "自定义发送"
+                        },
+                        "cateCode_0": {
+                          "type": "string",
+                          "example": "a1TCeRTr5pGNzfeGXZKrd2PZS9F2Zcr1"
+                        },
+                        "bizThemeFor_0": {
+                          "type": "string",
+                          "example": "627ZOABJ"
+                        },
+                        "freeSend_0": {
+                          "type": "integer",
+                          "example": 1
+                        },
+                        "formKey": {
+                          "type": "string",
+                          "example": "29SW2U8TiR5xIjQ1M"
+                        },
+                        "dataActionMethod": {
+                          "type": "string",
+                          "example": "insert"
+                        },
+                        "TraceID": {
+                          "type": "string",
+                          "example": "TraceID-h5xhbwehn6zpyygsepndgez"
+                        },
+                        "sceneKey": {
+                          "type": "string",
+                          "example": "data_sheet_editor"
+                        }
+                      }
+                    },
+                    "example": [
+                      {
+                        "spId": "230227193624162504",
+                        "memberId": null,
+                        "submitMemberId": null,
+                        "spCode_0": "230227193624162504",
+                        "sceneCode_0": "1bhTcVtTQyWNe3nvgWw3bjZW",
+                        "tagType_1": "-1",
+                        "accountCode_0": "BJS10154",
+                        "cateName_0": "自定义发送",
+                        "cateCode_0": "a1TCeRTr5pGNzfeGXZKrd2PZS9F2Zcr1",
+                        "bizThemeFor_0": "627ZOABJ",
+                        "freeSend_0": 1,
+                        "formKey": "29SW2U8TiR5xIjQ1M",
+                        "dataActionMethod": "insert",
+                        "TraceID": "TraceID-h5xhbwehn6zpyygsepndgez",
+                        "sceneKey": "data_sheet_editor"
+                      }
+                    ]
+                  },
+                  "_formSchema_": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "example": "模板标签信息表单"
+                      },
+                      "key": {
+                        "type": "string",
+                        "example": "29SW2U8TiR5xIjQ1M"
+                      },
+                      "fields": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "sp": {
+                              "type": "integer",
+                              "example": 0
+                            },
+                            "name": {
+                              "type": "string",
+                              "example": "sceneCode"
+                            },
+                            "type": {
+                              "type": "string",
+                              "example": "text"
+                            },
+                            "label": {
+                              "type": "string",
+                              "example": "场景编码"
+                            },
+                            "showlist": {
+                              "type": "boolean",
+                              "example": true
+                            },
+                            "showquery": {
+                              "type": "boolean",
+                              "example": true
+                            },
+                            "maxlength": {
+                              "type": "integer",
+                              "example": 256
+                            },
+                            "filter": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "label": {
+                                    "type": "string",
+                                    "example": "测试xx"
+                                  },
+                                  "policy": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "string"
+                                    },
+                                    "example": [
+                                      "%=测试3",
+                                      "%=测试4"
+                                    ]
+                                  }
+                                }
+                              },
+                              "example": [
+                                {
+                                  "label": "测试xx",
+                                  "policy": [
+                                    "%=测试3",
+                                    "%=测试4"
+                                  ]
+                                }
+                              ]
+                            },
+                            "ind": {
+                              "type": "string",
+                              "example": "f_string_153"
+                            }
+                          }
+                        },
+                        "example": [
+                          {
+                            "sp": 0,
+                            "name": "sceneCode",
+                            "type": "text",
+                            "label": "场景编码",
+                            "showlist": true,
+                            "showquery": true,
+                            "maxlength": 256,
+                            "filter": [
+                              {
+                                "label": "测试xx",
+                                "policy": [
+                                  "%=测试3",
+                                  "%=测试4"
+                                ]
+                              }
+                            ],
+                            "ind": "f_string_153"
+                          },
+                          {
+                            "sp": 1,
+                            "name": "tagType",
+                            "type": "select",
+                            "label": "标签类型",
+                            "showlist": true,
+                            "showquery": true,
+                            "values": [
+                              {
+                                "value": -1,
+                                "text": "请选择",
+                                "selected": true
+                              },
+                              {
+                                "value": 1,
+                                "text": "验证类标签",
+                                "selected": false
+                              },
+                              {
+                                "value": 2,
+                                "text": "通知类标签",
+                                "selected": false
+                              },
+                              {
+                                "value": 3,
+                                "text": "推广类标签",
+                                "selected": false
+                              }
+                            ],
+                            "ind": "f_values_196"
+                          }
+                        ]
+                      },
+                      "msg": {
+                        "type": "string",
+                        "example": "数据提交成功!"
+                      },
+                      "authkey": {
+                        "type": "string",
+                        "example": "W5J4L2BGJSCJN3NM2PIIYEHO5GAAK"
+                      },
+                      "themeColor": {
+                        "type": "string",
+                        "example": "#409eff"
+                      },
+                      "pageWidth": {
+                        "type": "string",
+                        "example": "640px"
+                      },
+                      "sys": {
+                        "type": "integer",
+                        "example": 1
+                      },
+                      "ind": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "example": [
+                          "sceneCode",
+                          "tagType"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AsyncResponse": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 200
+          },
+          "errmsg": {
+            "type": "string",
+            "example": "OK"
+          },
+          "transformTime": {
+            "type": "integer",
+            "example": 1743995840588
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "async": {
+                "type": "boolean",
+                "example": true
+              },
+              "TraceID": {
+                "type": "null"
+              }
+            }
+          },
+          "page": {
+            "type": "null"
+          }
+        }
+      },
+      "UnauthorizedError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 401
+          },
+          "message": {
+            "type": "string",
+            "example": "Unauthorized"
+          }
+        }
+      },
+      "HTTPValidationError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 422
+          },
+          "message": {
+            "type": "string",
+            "example": "Validation Error"
+          }
+        }
+      }
+    }
+  }
+}

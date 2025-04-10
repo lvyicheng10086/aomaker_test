@@ -1,0 +1,182 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Documentation for jf-marketepapi-uat.infocloud.com.cn",
+    "description": "自动生成的 API 文档",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/ep/sms/them/queryAll": {
+      "post": {
+        "tags": [
+          "ep"
+        ],
+        "summary": "queryAll",
+        "description": "捕获于 2025-04-07 11:14:07",
+        "operationId": "post_queryAll",
+        "parameters": [
+          {
+            "name": "TOKEN",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "5ae4b5a2-bbc6-4cc2-9e4f-76cee80707c6"
+            },
+            "description": "身份验证令牌"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功响应",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryallResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/schemas/UnauthorizedError"
+          },
+          "422": {
+            "$ref": "#/components/schemas/HTTPValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "spId": {
+                    "type": "string",
+                    "example": "230227193624162504"
+                  },
+                  "accountCode": {
+                    "type": "string",
+                    "example": "BJS10154"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "QueryallResponse": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 200
+          },
+          "errmsg": {
+            "type": "string",
+            "example": "操作成功"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "example": "985626583759355904"
+                },
+                "subjectCode": {
+                  "type": "string",
+                  "example": "627ZOABJ"
+                },
+                "subjectName": {
+                  "type": "string",
+                  "example": "通用用户列表"
+                },
+                "subjectWideTable": {
+                  "type": "string",
+                  "example": "h2hbe6mhykfag7gyzws5bez"
+                },
+                "formKey": {
+                  "type": "string",
+                  "example": "MNm63tbKdZAeNhJHffamXNxRyJpYF9j7"
+                },
+                "biUrl": {
+                  "type": "null"
+                },
+                "spId": {
+                  "type": "string",
+                  "example": "230227193624162504"
+                },
+                "spCode": {
+                  "type": "string",
+                  "example": "122210"
+                },
+                "accountCode": {
+                  "type": "string",
+                  "example": "BJS10154"
+                },
+                "createTime": {
+                  "type": "string",
+                  "example": "2024-05-08 16:49:15"
+                },
+                "updateTime": {
+                  "type": "null"
+                }
+              }
+            },
+            "example": [
+              {
+                "id": "985626583759355904",
+                "subjectCode": "627ZOABJ",
+                "subjectName": "通用用户列表",
+                "subjectWideTable": "h2hbe6mhykfag7gyzws5bez",
+                "formKey": "MNm63tbKdZAeNhJHffamXNxRyJpYF9j7",
+                "biUrl": null,
+                "spId": "230227193624162504",
+                "spCode": "122210",
+                "accountCode": "BJS10154",
+                "createTime": "2024-05-08 16:49:15",
+                "updateTime": null
+              }
+            ]
+          },
+          "requestId": {
+            "type": "string",
+            "example": "43b8e002-8473-44cf-8b59-1a4d137f4f2f"
+          }
+        }
+      },
+      "UnauthorizedError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 401
+          },
+          "message": {
+            "type": "string",
+            "example": "Unauthorized"
+          }
+        }
+      },
+      "HTTPValidationError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 422
+          },
+          "message": {
+            "type": "string",
+            "example": "Validation Error"
+          }
+        }
+      }
+    }
+  }
+}

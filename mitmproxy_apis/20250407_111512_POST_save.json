@@ -1,0 +1,172 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Documentation for jfapi-uat.infocloud.com.cn",
+    "description": "自动生成的 API 文档",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/ep/v2/sms/template/save": {
+      "post": {
+        "tags": [
+          "ep"
+        ],
+        "summary": "save",
+        "description": "捕获于 2025-04-07 11:15:12",
+        "operationId": "post_save",
+        "parameters": [
+          {
+            "name": "TOKEN",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "5ae4b5a2-bbc6-4cc2-9e4f-76cee80707c6"
+            },
+            "description": "身份验证令牌"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功响应",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SaveResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/schemas/UnauthorizedError"
+          },
+          "422": {
+            "$ref": "#/components/schemas/HTTPValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "自动化测试-通知类-模板"
+                  },
+                  "businessType": {
+                    "type": "integer",
+                    "example": 1
+                  },
+                  "signatureId": {
+                    "type": "string",
+                    "example": "1106579655988621312"
+                  },
+                  "template": {
+                    "type": "string",
+                    "example": "通知类模板发送"
+                  },
+                  "templateParams": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "paramId": {
+                          "type": "string",
+                          "example": "1"
+                        },
+                        "paramVal": {
+                          "type": "string",
+                          "example": "[00:00,23:59]"
+                        }
+                      }
+                    },
+                    "example": [
+                      {
+                        "paramId": "1",
+                        "paramVal": "[00:00,23:59]"
+                      },
+                      {
+                        "paramId": "2",
+                        "paramVal": "(0,99999980]"
+                      }
+                    ]
+                  },
+                  "status": {
+                    "type": "integer",
+                    "example": 1
+                  },
+                  "objId": {
+                    "type": "string",
+                    "example": "2-JxNnpcyCD3AiBmTRw7FkreCfAGkRbaeY"
+                  },
+                  "subject": {
+                    "type": "string",
+                    "example": "627ZOABJ"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "SaveResponse": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 200
+          },
+          "errmsg": {
+            "type": "string",
+            "example": "操作成功"
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "example": "1106579682240237568"
+              }
+            }
+          },
+          "requestId": {
+            "type": "string",
+            "example": "814d735ad0f24f6982edc80d4c03b7a8"
+          }
+        }
+      },
+      "UnauthorizedError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 401
+          },
+          "message": {
+            "type": "string",
+            "example": "Unauthorized"
+          }
+        }
+      },
+      "HTTPValidationError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 422
+          },
+          "message": {
+            "type": "string",
+            "example": "Validation Error"
+          }
+        }
+      }
+    }
+  }
+}

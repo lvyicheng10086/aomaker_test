@@ -1,0 +1,139 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Documentation for bizapi-uat.infocloud.com.cn",
+    "description": "自动生成的 API 文档",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/sheet-v2/api/sheet/DataSheet/bridgeTo": {
+      "post": {
+        "tags": [
+          "sheet-v2"
+        ],
+        "summary": "bridgeTo",
+        "description": "捕获于 2025-04-07 11:15:13",
+        "operationId": "post_bridgeTo",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "成功响应",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BridgetoResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/schemas/UnauthorizedError"
+          },
+          "422": {
+            "$ref": "#/components/schemas/HTTPValidationError"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BridgetoResponse": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 200
+          },
+          "errmsg": {
+            "type": "string",
+            "example": "OK"
+          },
+          "transformTime": {
+            "type": "integer",
+            "example": 1743995621770
+          },
+          "data": {
+            "type": "string",
+            "example": "owGQ0ifU98lQg8WDyoVfAXAMxWFroM1y3rb6o3ODyFIA9QvQyeBVniyBAH9T9fAdno1fc36qm4VTxofXCDJkR0ID5DzvxeVDCwVE1wlQjHBVni1Zbozr6iaUJc9T9UBu3SFvgM3r9QvQnDfTyYVf5oyY5w9QRQ9ig8bmMrWHcQ9G9D1VbYy45iAf98lQcXVR5XL8x31FgrWI6DO33XCwADqdJ31D63bs3DBVJyUQjHB8n0AfMDWqJc9T9EQeNEouNRogfEmOQ_QZfcwI7BsXXT0XG5GqzNQVzIi-9QvQniaq5ofrAYyimo1f98lQCYgQjHB85iOqm0ABCH9T98FzgQkt187EgHkt1MUQjHB8CDyVbYy3moOf98lt1S6SRMUO189vR4CtjHBf5DWQ5Y3QR8PG9DJZCDOjJ0UQRQ9dRy10gf3kyYfc10VBmfFtMc9G9X18Jozf6iaUJc9T98WQmWA8yXA330f0MD3S5XJXywCSnDImyd9G9X1v6iaUJc9T989Sg49d1SFzgSnd14Fig83v1H9G9X1vco6QRQ9dgSPdg8CtRMgig86t189Og46QjHBrnob3x0Lf98ldjHBrnob3x0Lf0i1Z5XAf5X6QR89G9XyvJYWrJyAI5o3QR8Fw14gzRM3ig8Pk1SWajeGQ0ifU98lQg8WDyoVHJS14RWFdoDgScrkicfAJbiaB9QvQyeBVniyBAH9T9fAdno1fc36qm4PrCM9kmofN5XUOxXfICDyEx0BQ10lQjHBVni1Zbozr6iaUJc9T9UBu3SFvgM3r9QvQnDfTyYVf5oyY5w9QRQ9ig8bmMrWHcQ9G9D1VbYy45iAf98lQcrqun01TmOfU60AQgoITmFWmAFBFM36d681WRMFv6olQjHB8n0AfMDWqJc9T9EQeNEouNRogfEmOQ_QZfc9G9D1Z5oOIbFAfbDf8Jc9T9XL89QvQniaq5ofrc0PQRQ9tRM9EgMnkj8PEgM3z9QvQnwBfn0AfyYfqJc9TgMCrgS3wgSgrgMPOgQvQJozVnDtf98lvjHBD5wBqciyz98lQg8fMySByRWAI38ykcoIAg3rQjHBSniyEJ31ZJY3QRQ9tnDV3nOJryWWzyrzfgiziJObwgiBNofCQjHBSCF1ZJY3QRQ9dgSPdg8CtRMgig86t189Og46QjHBSCFfU98lQg8gvg89wgMUS189rgMnd1MPr9QvQbYWXyefvJc9TgQvQbYWXyefvJya85izrJozr98ldjHBOCYAVbYy3moOf98lt1S6S1MCSgS6tg43dpctK9faIJH9T98WgnyyUcfVDcDJAgyCwCMAM38bt5wfzxH9G9fAdno1fc36QRQB3CDW8J3fFjo7dCDyIxDVqCYIEbwfUx0frmDWvx4AT9QvQno185wyEbF1ZJY3QRQBHcfgtg4FO1H9G9DBIxfAlJoOfADad98lQ189woUaL6UlQjHB8n0Af6iaUJc9T9UbS3WLcoofAgwCOJFgkm8WVbSfI6OUioXBE6rBSReLq9QvQniWrJ3zV5o3QRQjfIupf8z8IVkhQjHB85iOqm0AFJ0JIni3QRQBvnd9G9D1Z5oOIbFfv98lQgMUdj8FiRHkvj8FORc9G9D1dJoWrJyAI5o3QR8Fw14Pvg83vg8FzRMUG9DyEnoBGJc9TgHvQJDad53qfxc9T989z3OCdyMV3my9OxFfN3MW19QvQCi1f5Dy45iAf98lQgoBlyY1obWAAxybRJM1EbDb0bS1QmfI09QvQCwL45iAf98lQg8gvg89wgMUS189rgMnd1MPr9QvQCwLBJH9T989Sg49d1SFzgSnd14Fig83v1H9G9XAVJOAzCY3QR89G9XAVJOAzCYypniaEbYyEbH9TgQvQb0LUn0AfyYfqJc9TgMCrg4Pd1MPdgMUzR0rGxdBpmo6QRQ9tJWbyAoBH6fWo3MBgb3bsAFf65rqR1OPQjHB3CDW8J3fF98lQyeBVniyBAHOlg0LqCiINgMJSgDWs5XIQRePz1XCrxQ9G9DW8niaO5XA45iAf98lQ6UIMgMPt1M6QjHBQm0I3mYyqJ3JZCQ9T98nd1OI263Bu9QvQniWrJ31ZJY3QRQBFAFz3yrFOAebRgff6xf9vn3W8grBHySAdcSBQ6rbc5Q9G9D1VbYyRnoOf98lQzKE2znQYzNQVzIi-9QvQniaq5ofrAYyimo1f98lQCYgQjHB85iOqm0ABCH9T98FzgQkt187EgHkt1MUQjHB8CDyVbYy3moOf98lt1SFwgS7dgSFwgMgOjHBf5DWQ5Y3QR8PG9DJZCDOjJ0UQRQ9dRy10gf3kyYfc10VBmfFtMc9G9X18Jozf6iaUJc9T98WQmWA8yXA330f0MD3S5XJXywCSnDImyd9G9X1v6iaUJc9T989Sg49d1SFzgSnd14Fig83v1H9G9X1vco6QRQ9dgSPdg8CtRMgig86t189Og46QjHBrnob3x0Lf98ldjHBrnob3x0Lf0i1Z5XAf5X6QR89G9XyvJYWrJyAI5o3QR8FwgMCSR49SgMCtgSyajeGQ0ifU98lQgoA0y3yQ68JMmWFdcSyXm0B9o4BvxeJO9QvQyeBVniyBAH9T9fAdno1fc36qm43wmwVECDySx0fzCYqkC8nvJoAqJ0lQjHBVni1Zbozr6iaUJc9T9UBu3SFvgM3r9QvQnDfTyYVf5oyY5w9QRQ9ig8bmMrWHcQ9G9D1VbYy45iAf98lQgX10nw7i3W1U38L13o7zy43r3U7OC8Jj1W9w1rWrCO6QjHB8n0AfMDWqJc9T9EQOQ_Q4ZxmllxmbZd9G9D1Z5oOIbFAfbDf8Jc9T9XL89QvQniaq5ofrc0PQRQ9tRM9EgMnkj8PEgM3z9QvQnwBfn0AfyYfqJc9TgMCt1Sgkg89zR4POgcvQJozVnDtf98lvjHBD5wBqciyz98lQg8fMySByRWAI38ykcoIAg3rQjHBSniyEJ31ZJY3QRQ9tnDV3nOJryWWzyrzfgiziJObwgiBNofCQjHBSCF1ZJY3QRQ9dgSPdg8CtRMgig86t189Og46QjHBSCFfU98lQg8gvg89wgMUS189rgMnd1MPr9QvQbYWXyefvJc9TgQvQbYWXyefvJya85izrJozr98ldjHBOCYAVbYy3moOf98lt1SFwgS7dg8Ukg43tpctK9faIJH9T98WUyOyWnUW4JObAgUft5UtfxffJADkSAQ9G9fAdno1fc36QRQB3CDW8J3fFjo7vxY1EnwFwC81TC4AEbibTbiIVgYJT9QvQno185wyEbF1ZJY3QRQBHcfgtg4FO1H9G9DBIxfAlJoOfADad98lQ189woUaL6UlQjHB8n0Af6iaUJc9T9fARg3IVoWbF3fLqAYJ0AMFSni1UcUIwCrzYgyAdgyCS9QvQniWrJ3zV5o3QRQjUZm4fI5rQjHB85iOqm0AFJ0JIni3QRQBvnd9G9D1Z5oOIbFfv98lQgMUdj8FiRHkvj8FORc9G9D1dJoWrJyAI5o3QR8FwgMCSR49vR4gi146G9DyEnoBGJc9TgHvQJDad53qfxc9T989z3OCdyMV3my9OxFfN3MW19QvQCi1f5Dy45iAf98lQgoBlyY1obWAAxybRJM1EbDb0bS1QmfI09QvQCwL45iAf98lQg8gvg89wgMUS189rgMnd1MPr9QvQCwLBJH9T989Sg49d1SFzgSnd14Fig83v1H9G9XAVJOAzCY3QR89G9XAVJOAzCYypniaEbYyEbH9TgQvQb0LUn0AfyYfqJc9TgMCt1Sgkg8PkgSnr1erGxdBpmo6QRQ9tJWbyAo9zb41I3MB9AUlwbUOr1FAn3FvQjHB3CDW8J3fF98lQyeBVniyBAHOlRe1ExMLlRebfx4VlC0L8x0AfCe9ixQ9G9DW8niaO5XA45iAf98lQ6UIMgMPt1M6QjHBQm0I3mYyqJ3JZCQ9T98nd1OI263Bu9QvQniWrJ31ZJY3QRQB1Ci1LAUI6yOUtmwVjmXUkCfbIcXAJ3OCdmfbQbSbm1c9G9D1VbYyRnoOf98lQ0Yk79HP79HP79RmrE_ouNRDPDExpIc9G9D1Z5oOIbFAfbDf8Jc9T9XL89QvQniaq5ofrc0PQRQ9tRM9EgMnkj8PEgM3z9QvQnwBfn0AfyYfqJc9TgMCt1Sgkg8PvR49vgQvQJozVnDtf98lvjHBD5wBqciyz98lQg8fMySByRWAI38ykcoIAg3rQjHBSniyEJ31ZJY3QRQ9tnDV3nOJryWWzyrzfgiziJObwgiBNofCQjHBSCF1ZJY3QRQ9dgSPdg8CtRMgig86t189Og46QjHBSCFfU98lQg8gvg89wgMUS189rgMnd1MPr9QvQbYWXyefvJc9TgQvQbYWXyefvJya85izrJozr98ldjHBOCYAVbYy3moOf98lt1SFwgS7dg4Pkg8PdpctK9faIJH9T98WUyOyWn8fSxXVAgUbVciajCFgdRYkwgc9G9fAdno1fc36QRQB3CDW8J3fFjo7wxXIqxoANJiOwxXfQx0ATmeffgMJT9QvQno185wyEbF1ZJY3QRQBHcfgtg4FO1H9G9DBIxfAlJoOfADad98lQ189woUaL6UlQjHB8n0Af6iaUJc9T9D9vo4WVooB8JDBDoegt3OBr1rFdJygdMMALMU1vgFVJ9QvQniWrJ3zV5o3QRQjXs5KfQjPQjHB85iOqm0AFJ0JIni3QRQBvnd9G9D1Z5oOIbFfv98lQgMUdj8FiRHkvj8FORc9G9D1dJoWrJyAI5o3QR8FwgMCSR49vg4Cz18UG9DyEnoBGJc9TgHvQJDad53qfxc9T989z3OCdyMV3my9OxFfN3MW19QvQCi1f5Dy45iAf98lQgoBlyY1obWAAxybRJM1EbDb0bS1QmfI09QvQCwL45iAf98lQg8gvg89wgMUS189rgMnd1MPr9QvQCwLBJH9T989Sg49d1SFzgSnd14Fig83v1H9G9XAVJOAzCY3QR89G9XAVJOAzCYypniaEbYyEbH9TgQvQb0LUn0AfyYfqJc9TgMCt1Sgkg8Pv1SUiR0rGxdBpmo6QRQBf5Oy46oyfgoqAg3bd5orv1SJq6Sfz6oUQjHB3CDW8J3fF98lQyeBVniyBAHOl1DVT58UwgwlSJo7igefVJe1vbYyUxQ9G9DW8niaO5XA45iAf98lQ6UIMgMPt1M6QjHBQm0I3mYyqJ3JZCQ9T98nd1OI263Bu9QvQniWrJ31ZJY3QRQBeJebj5DOeoDfnCYBVn0UtceCiASVY6rrdnDff3YBeMc9G9D1VbYyRnoOf98lQgMFt9QvQniaq5ofrAYyimo1f98lQCYgQjHB85iOqm0ABCH9T98FzgQkt187EgHkt1MUQjHB8CDyVbYy3moOf98lt1SFOgM3kgMFtR43djHBf5DWQ5Y3QR8PG9DJZCDOjJ0UQRQ9dRy10gf3kyYfc10VBmfFtMc9G9X18Jozf6iaUJc9T98WQmWA8yXA330f0MD3S5XJXywCSnDImyd9G9X1v6iaUJc9T989Sg49d1SFzgSnd14Fig83v1H9G9X1vco6QRQ9dgSPdg8CtRMgig86t189Og46QjHBrnob3x0Lf98ldjHBrnob3x0Lf0i1Z5XAf5X6QR89G9XyvJYWrJyAI5o3QR8FwgM3t1M7tgMFk1MBa06=="
+          },
+          "page": {
+            "type": "object",
+            "properties": {
+              "totalCalculate": {
+                "type": "integer",
+                "example": 0
+              },
+              "total": {
+                "type": "integer",
+                "example": 9
+              },
+              "sort": {
+                "type": "string",
+                "example": "createTime"
+              },
+              "dir": {
+                "type": "string",
+                "example": "DESC"
+              },
+              "hint": {
+                "type": "null"
+              },
+              "page": {
+                "type": "integer",
+                "example": 1
+              },
+              "pageSize": {
+                "type": "integer",
+                "example": 9999
+              },
+              "pageMode": {
+                "type": "boolean",
+                "example": true
+              },
+              "mongoSort": {
+                "type": "object",
+                "properties": {
+                  "createTime": {
+                    "type": "integer",
+                    "example": -1
+                  }
+                }
+              },
+              "orderBy": {
+                "type": "string",
+                "example": "createTime DESC"
+              }
+            }
+          }
+        }
+      },
+      "UnauthorizedError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 401
+          },
+          "message": {
+            "type": "string",
+            "example": "Unauthorized"
+          }
+        }
+      },
+      "HTTPValidationError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 422
+          },
+          "message": {
+            "type": "string",
+            "example": "Validation Error"
+          }
+        }
+      }
+    }
+  }
+}

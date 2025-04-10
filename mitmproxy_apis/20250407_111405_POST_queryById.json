@@ -1,0 +1,637 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Documentation for bizapi-uat.infocloud.com.cn",
+    "description": "自动生成的 API 文档",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/sheet-v2/api/sheet/FormEditor/queryById": {
+      "post": {
+        "tags": [
+          "sheet-v2"
+        ],
+        "summary": "queryById",
+        "description": "捕获于 2025-04-07 11:14:05",
+        "operationId": "post_queryById",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "成功响应",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QuerybyidResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/schemas/UnauthorizedError"
+          },
+          "422": {
+            "$ref": "#/components/schemas/HTTPValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "example": "MNm63tbKdZAeNhJHffamXNxRyJpYF9j7"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "QuerybyidResponse": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 200
+          },
+          "errmsg": {
+            "type": "string",
+            "example": "OK"
+          },
+          "transformTime": {
+            "type": "integer",
+            "example": 1743995554298
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "_id": {
+                "type": "string",
+                "example": "MNm63tbKdZAeNhJHffamXNxRyJpYF9j7"
+              },
+              "appConfig": {
+                "type": "object",
+                "properties": {}
+              },
+              "createTime": {
+                "type": "integer",
+                "example": 1719392269733
+              },
+              "enable": {
+                "type": "integer",
+                "example": 0
+              },
+              "formSchema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "BJS10154"
+                  },
+                  "key": {
+                    "type": "string",
+                    "example": "MNm63tbKdZAeNhJHffamXNxRyJpYF9j7"
+                  },
+                  "fields": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "sp": {
+                          "type": "integer",
+                          "example": 0
+                        },
+                        "name": {
+                          "type": "string",
+                          "example": "user_id"
+                        },
+                        "type": {
+                          "type": "string",
+                          "example": "text"
+                        },
+                        "label": {
+                          "type": "string",
+                          "example": "用户ID"
+                        },
+                        "showlist": {
+                          "type": "boolean",
+                          "example": true
+                        },
+                        "showquery": {
+                          "type": "boolean",
+                          "example": true
+                        },
+                        "maxlength": {
+                          "type": "integer",
+                          "example": 256
+                        },
+                        "ind": {
+                          "type": "string",
+                          "example": "f_string_113"
+                        }
+                      }
+                    },
+                    "example": [
+                      {
+                        "sp": 0,
+                        "name": "user_id",
+                        "type": "text",
+                        "label": "用户ID",
+                        "showlist": true,
+                        "showquery": true,
+                        "maxlength": 256,
+                        "ind": "f_string_113"
+                      },
+                      {
+                        "sp": 0,
+                        "name": "username",
+                        "type": "text",
+                        "label": "姓名",
+                        "showlist": true,
+                        "showquery": true,
+                        "maxlength": 64,
+                        "ind": "f_string_50"
+                      }
+                    ]
+                  },
+                  "msg": {
+                    "type": "string",
+                    "example": "数据提交成功!"
+                  },
+                  "authkey": {
+                    "type": "string",
+                    "example": "VB44UQTGBIBAV4UG3SBF2GOO5IPJ2"
+                  },
+                  "themeColor": {
+                    "type": "string",
+                    "example": "#409eff"
+                  },
+                  "pageWidth": {
+                    "type": "string",
+                    "example": "640px"
+                  },
+                  "bodyClass": {
+                    "type": "string",
+                    "example": "copyright"
+                  },
+                  "sys": {
+                    "type": "integer",
+                    "example": 1
+                  },
+                  "ind": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "example": [
+                      "user_id",
+                      "username"
+                    ]
+                  }
+                }
+              },
+              "pcConfig": {
+                "type": "object",
+                "properties": {
+                  "selectStyle": {
+                    "type": "string",
+                    "example": "dynamic"
+                  },
+                  "theme": {
+                    "type": "string",
+                    "example": "#0066FF"
+                  },
+                  "filterFields": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "example": []
+                  },
+                  "tableFields": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "example": [
+                      "user_id",
+                      "username"
+                    ]
+                  },
+                  "tableFileldsAlias": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string",
+                          "example": "user_id"
+                        },
+                        "label": {
+                          "type": "string",
+                          "example": "用户ID"
+                        }
+                      }
+                    },
+                    "example": [
+                      {
+                        "name": "user_id",
+                        "label": "用户ID"
+                      },
+                      {
+                        "name": "username",
+                        "label": "姓名"
+                      }
+                    ]
+                  },
+                  "toolsBtn": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string",
+                          "example": "添加数据"
+                        },
+                        "name": {
+                          "type": "string",
+                          "example": "addData"
+                        },
+                        "toolChecked": {
+                          "type": "boolean",
+                          "example": true
+                        }
+                      }
+                    },
+                    "example": [
+                      {
+                        "label": "添加数据",
+                        "name": "addData",
+                        "toolChecked": true
+                      },
+                      {
+                        "label": "手动添加",
+                        "name": "manualAddData",
+                        "dialogModel": true,
+                        "isCoverFull": false,
+                        "width": 695,
+                        "height": 500,
+                        "toolChecked": true,
+                        "isDialog": true
+                      }
+                    ]
+                  },
+                  "operateBtn": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string",
+                          "example": "查看"
+                        },
+                        "name": {
+                          "type": "string",
+                          "example": "detailRowData"
+                        },
+                        "dialogModel": {
+                          "type": "boolean",
+                          "example": true
+                        },
+                        "isCoverFull": {
+                          "type": "boolean",
+                          "example": false
+                        },
+                        "width": {
+                          "type": "integer",
+                          "example": 695
+                        },
+                        "height": {
+                          "type": "integer",
+                          "example": 500
+                        },
+                        "operateChecked": {
+                          "type": "boolean",
+                          "example": true
+                        },
+                        "isDialog": {
+                          "type": "boolean",
+                          "example": true
+                        }
+                      }
+                    },
+                    "example": [
+                      {
+                        "label": "查看",
+                        "name": "detailRowData",
+                        "dialogModel": true,
+                        "isCoverFull": false,
+                        "width": 695,
+                        "height": 500,
+                        "operateChecked": true,
+                        "isDialog": true
+                      },
+                      {
+                        "label": "编辑",
+                        "name": "editRowData",
+                        "dialogModel": true,
+                        "isCoverFull": false,
+                        "width": 695,
+                        "height": 500,
+                        "operateChecked": true,
+                        "isDialog": true
+                      }
+                    ]
+                  },
+                  "customDialog": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "example": []
+                  },
+                  "batchOperate": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "example": []
+                  },
+                  "sortable": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "example": []
+                  },
+                  "fixedColumn": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "example": []
+                  },
+                  "sortSetting": {
+                    "type": "object",
+                    "properties": {
+                      "dir": {
+                        "type": "string",
+                        "example": "desc"
+                      },
+                      "sort": {
+                        "type": "string",
+                        "example": "createTime"
+                      }
+                    }
+                  },
+                  "commonConfig": {
+                    "type": "object",
+                    "properties": {
+                      "operateFixed": {
+                        "type": "boolean",
+                        "example": false
+                      },
+                      "operateWidth": {
+                        "type": "integer",
+                        "example": 150
+                      },
+                      "refreshOpen": {
+                        "type": "boolean",
+                        "example": false
+                      },
+                      "refreshTime": {
+                        "type": "integer",
+                        "example": 5
+                      },
+                      "importTemplateUrl": {
+                        "type": "string",
+                        "example": ""
+                      },
+                      "customDownloadUrl": {
+                        "type": "string",
+                        "example": ""
+                      },
+                      "customUploadUrl": {
+                        "type": "string",
+                        "example": ""
+                      },
+                      "customExportFields": {
+                        "type": "boolean",
+                        "example": false
+                      },
+                      "isIndexField": {
+                        "type": "string",
+                        "example": ""
+                      },
+                      "searchFold": {
+                        "type": "boolean",
+                        "example": false
+                      },
+                      "fixTableHeader": {
+                        "type": "boolean",
+                        "example": false
+                      },
+                      "ifRowDialog": {
+                        "type": "boolean",
+                        "example": false
+                      },
+                      "rowDialogPageUrl": {
+                        "type": "string",
+                        "example": ""
+                      },
+                      "rowDialogLabel": {
+                        "type": "string",
+                        "example": ""
+                      },
+                      "rowDialogWidth": {
+                        "type": "string",
+                        "example": "400"
+                      },
+                      "rowDialogHeight": {
+                        "type": "string",
+                        "example": "226"
+                      },
+                      "rowDialogCoverFull": {
+                        "type": "boolean",
+                        "example": false
+                      },
+                      "cellsClickList": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "example": []
+                      },
+                      "orgAccountUrl": {
+                        "type": "string",
+                        "example": ""
+                      },
+                      "exportUrl": {
+                        "type": "string",
+                        "example": ""
+                      },
+                      "aggregate": {
+                        "type": "string",
+                        "example": ""
+                      },
+                      "appIdSwitch": {
+                        "type": "boolean",
+                        "example": false
+                      },
+                      "businessTypeSwitch": {
+                        "type": "boolean",
+                        "example": false
+                      }
+                    }
+                  },
+                  "defaultFilter": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "example": []
+                  },
+                  "defaultFsmFilter": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "example": []
+                  },
+                  "rowRules": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "example": []
+                  },
+                  "dataSource": {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "type": "string",
+                        "example": "Mongodb"
+                      },
+                      "HbaseTable": {
+                        "type": "string",
+                        "example": ""
+                      }
+                    }
+                  },
+                  "newpagger": {
+                    "type": "boolean",
+                    "example": true
+                  },
+                  "configLocked": {
+                    "type": "boolean",
+                    "example": true
+                  }
+                }
+              },
+              "sceneId": {
+                "type": "string",
+                "example": "RkTiWpKbnQ4X2PbxdGvwqhvV"
+              },
+              "sort": {
+                "type": "string",
+                "example": "1688001782703"
+              },
+              "title": {
+                "type": "string",
+                "example": "BJS10154"
+              },
+              "updateTime": {
+                "type": "integer",
+                "example": 1719392269733
+              },
+              "html": {
+                "type": "object",
+                "properties": {
+                  "fid": {
+                    "type": "string",
+                    "example": "663b3c8798c3fb000952de44"
+                  },
+                  "filename": {
+                    "type": "string",
+                    "example": "MNm63tbKdZAeNhJHffamXNxRyJpYF9j7.html"
+                  },
+                  "size": {
+                    "type": "integer",
+                    "example": 23384
+                  },
+                  "_blob_": {
+                    "type": "boolean",
+                    "example": true
+                  },
+                  "url": {
+                    "type": "string",
+                    "example": "api/fs/f/663b3c8798c3fb000952de44"
+                  },
+                  "md5": {
+                    "type": "null"
+                  }
+                }
+              },
+              "memberId": {
+                "type": "string",
+                "example": "2022140262"
+              },
+              "memberName": {
+                "type": "string",
+                "example": "胡圆"
+              },
+              "pageType": {
+                "type": "string",
+                "example": "0"
+              },
+              "spId": {
+                "type": "string",
+                "example": "230227193624162504"
+              },
+              "userId": {
+                "type": "string",
+                "example": "100895"
+              }
+            }
+          },
+          "page": {
+            "type": "null"
+          }
+        }
+      },
+      "UnauthorizedError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 401
+          },
+          "message": {
+            "type": "string",
+            "example": "Unauthorized"
+          }
+        }
+      },
+      "HTTPValidationError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 422
+          },
+          "message": {
+            "type": "string",
+            "example": "Validation Error"
+          }
+        }
+      }
+    }
+  }
+}

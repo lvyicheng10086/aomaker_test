@@ -1,0 +1,296 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Documentation for api-uat.infocloud.com.cn",
+    "description": "自动生成的 API 文档",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/auth/product/list": {
+      "post": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "list",
+        "description": "捕获于 2025-04-07 11:14:05",
+        "operationId": "post_list",
+        "parameters": [
+          {
+            "name": "TOKEN",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "5ae4b5a2-bbc6-4cc2-9e4f-76cee80707c6"
+            },
+            "description": "身份验证令牌"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功响应",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/schemas/UnauthorizedError"
+          },
+          "422": {
+            "$ref": "#/components/schemas/HTTPValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "sourceType": {
+                    "type": "integer",
+                    "example": 1
+                  },
+                  "realmCode": {
+                    "type": "string",
+                    "example": "64216c2ee4b0a40fdd458091PL"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ListResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "example": 200
+          },
+          "message": {
+            "type": "string",
+            "example": "成功"
+          },
+          "dataCount": {
+            "type": "null"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "example": "230309154932120975"
+                },
+                "productCode": {
+                  "type": "string",
+                  "example": "isOA004"
+                },
+                "productName": {
+                  "type": "string",
+                  "example": "费用中心"
+                },
+                "displayName": {
+                  "type": "string",
+                  "example": "费用中心"
+                },
+                "productCatalogId": {
+                  "type": "string",
+                  "example": "230309154932120973"
+                },
+                "position": {
+                  "type": "string",
+                  "example": "right"
+                },
+                "productAddress": {
+                  "type": "string",
+                  "example": "https://mp-uat.infocloud.cc/#/cost?permissionVersion=v5"
+                },
+                "publisher": {
+                  "type": "null"
+                },
+                "publishTime": {
+                  "type": "null"
+                },
+                "spId": {
+                  "type": "string",
+                  "example": "230227193624000183"
+                },
+                "realmCode": {
+                  "type": "string",
+                  "example": "64216c2ee4b0a40fdd458091PL"
+                },
+                "accountCode": {
+                  "type": "string",
+                  "example": "SCS10054"
+                },
+                "updateTime": {
+                  "type": "string",
+                  "example": "2025-03-18 09:36:11"
+                },
+                "createTime": {
+                  "type": "string",
+                  "example": "2023-04-27 13:53:19"
+                },
+                "creatorId": {
+                  "type": "string",
+                  "example": "SCS10054"
+                },
+                "updaterId": {
+                  "type": "string",
+                  "example": "SCS10054"
+                },
+                "status": {
+                  "type": "integer",
+                  "example": 1
+                },
+                "productCatalogName": {
+                  "type": "string",
+                  "example": "组织帐号鉴权"
+                },
+                "productCatalogCode": {
+                  "type": "string",
+                  "example": "OA"
+                },
+                "associatedFlag": {
+                  "type": "null"
+                },
+                "sourceDataType": {
+                  "type": "string",
+                  "example": "product"
+                },
+                "originType": {
+                  "type": "string",
+                  "example": "page"
+                }
+              }
+            },
+            "example": [
+              {
+                "id": "230309154932120975",
+                "productCode": "isOA004",
+                "productName": "费用中心",
+                "displayName": "费用中心",
+                "productCatalogId": "230309154932120973",
+                "position": "right",
+                "productAddress": "https://mp-uat.infocloud.cc/#/cost?permissionVersion=v5",
+                "publisher": null,
+                "publishTime": null,
+                "spId": "230227193624000183",
+                "realmCode": "64216c2ee4b0a40fdd458091PL",
+                "accountCode": "SCS10054",
+                "updateTime": "2025-03-18 09:36:11",
+                "createTime": "2023-04-27 13:53:19",
+                "creatorId": "SCS10054",
+                "updaterId": "SCS10054",
+                "status": 1,
+                "productCatalogName": "组织帐号鉴权",
+                "productCatalogCode": "OA",
+                "associatedFlag": null,
+                "sourceDataType": "product",
+                "originType": "page"
+              },
+              {
+                "id": "230309154932120981",
+                "productCode": "isOA002",
+                "productName": "账号管理",
+                "displayName": "账号管理",
+                "productCatalogId": "230309154932120973",
+                "position": "right",
+                "productAddress": "https://mp-uat.infocloud.cc/#/org-account?permissionVersion=v5",
+                "publisher": null,
+                "publishTime": null,
+                "spId": "230227193624000183",
+                "realmCode": "64216c2ee4b0a40fdd458091PL",
+                "accountCode": "SCS10054",
+                "updateTime": "2023-10-30 17:46:12",
+                "createTime": "2023-04-27 13:54:07",
+                "creatorId": "SCS10054",
+                "updaterId": "SCS10054",
+                "status": 1,
+                "productCatalogName": "组织帐号鉴权",
+                "productCatalogCode": "OA",
+                "associatedFlag": null,
+                "sourceDataType": "account",
+                "originType": "page"
+              }
+            ]
+          },
+          "errcode": {
+            "type": "integer",
+            "example": 200
+          },
+          "errmsg": {
+            "type": "string",
+            "example": "成功"
+          },
+          "nextCursor": {
+            "type": "null"
+          },
+          "page": {
+            "type": "object",
+            "properties": {
+              "page": {
+                "type": "null"
+              },
+              "pageSize": {
+                "type": "null"
+              },
+              "sort": {
+                "type": "null"
+              },
+              "total": {
+                "type": "integer",
+                "example": 1432
+              },
+              "totalPages": {
+                "type": "integer",
+                "example": 1
+              },
+              "hasNext": {
+                "type": "boolean",
+                "example": false
+              }
+            }
+          }
+        }
+      },
+      "UnauthorizedError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 401
+          },
+          "message": {
+            "type": "string",
+            "example": "Unauthorized"
+          }
+        }
+      },
+      "HTTPValidationError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 422
+          },
+          "message": {
+            "type": "string",
+            "example": "Validation Error"
+          }
+        }
+      }
+    }
+  }
+}

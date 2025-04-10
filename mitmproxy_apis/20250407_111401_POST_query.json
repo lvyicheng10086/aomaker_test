@@ -1,0 +1,363 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Documentation for api-uat.infocloud.com.cn",
+    "description": "自动生成的 API 文档",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/auth/resource/query": {
+      "post": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "query",
+        "description": "捕获于 2025-04-07 11:14:01",
+        "operationId": "post_query",
+        "parameters": [
+          {
+            "name": "TOKEN",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "5ae4b5a2-bbc6-4cc2-9e4f-76cee80707c6"
+            },
+            "description": "身份验证令牌"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功响应",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/schemas/UnauthorizedError"
+          },
+          "422": {
+            "$ref": "#/components/schemas/HTTPValidationError"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "resourceType": {
+                    "type": "string",
+                    "example": "sp"
+                  },
+                  "spId": {
+                    "type": "string",
+                    "example": "230227193624162504"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "QueryResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "example": 200
+          },
+          "message": {
+            "type": "string",
+            "example": "成功"
+          },
+          "dataCount": {
+            "type": "null"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "example": "230309154932367992"
+                },
+                "defaultPermissions": {
+                  "type": "null"
+                },
+                "extend": {
+                  "type": "null"
+                },
+                "parentCode": {
+                  "type": "null"
+                },
+                "resourceLevel": {
+                  "type": "null"
+                },
+                "productId": {
+                  "type": "null"
+                },
+                "description": {
+                  "type": "null"
+                },
+                "sourceVersion": {
+                  "type": "null"
+                },
+                "resourceType": {
+                  "type": "string",
+                  "example": "sp"
+                },
+                "productType": {
+                  "type": "string",
+                  "example": "product"
+                },
+                "sourceDataType": {
+                  "type": "string",
+                  "example": "product"
+                },
+                "code": {
+                  "type": "string",
+                  "example": "esIA001897:as1899372224617754624"
+                },
+                "name": {
+                  "type": "string",
+                  "example": "标签"
+                },
+                "realmId": {
+                  "type": "string",
+                  "example": "64216c2ee4b0a40fdd458091PL"
+                },
+                "spId": {
+                  "type": "string",
+                  "example": "230227193624162504"
+                },
+                "status": {
+                  "type": "integer",
+                  "example": 1
+                },
+                "creatorId": {
+                  "type": "string",
+                  "example": "system"
+                },
+                "createTime": {
+                  "type": "string",
+                  "example": "2025-03-11 16:10:11"
+                },
+                "updateTime": {
+                  "type": "string",
+                  "example": "2025-03-11 16:10:11"
+                },
+                "lastModifiedBy": {
+                  "type": "string",
+                  "example": "system"
+                },
+                "type": {
+                  "type": "string",
+                  "example": "front"
+                },
+                "index": {
+                  "type": "null"
+                },
+                "formKey": {
+                  "type": "string",
+                  "example": ""
+                },
+                "url": {
+                  "type": "string",
+                  "example": ""
+                },
+                "perActions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "example": []
+                },
+                "actions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "example": []
+                },
+                "fileds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "example": []
+                },
+                "dataInfos": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "example": []
+                },
+                "seq": {
+                  "type": "integer",
+                  "example": 0
+                },
+                "sourceId": {
+                  "type": "string",
+                  "example": "230309154932369256"
+                },
+                "sourceType": {
+                  "type": "integer",
+                  "example": 2
+                },
+                "productName": {
+                  "type": "string",
+                  "example": "埋点创建应用"
+                }
+              }
+            },
+            "example": [
+              {
+                "id": "230309154932367992",
+                "defaultPermissions": null,
+                "extend": null,
+                "parentCode": null,
+                "resourceLevel": null,
+                "productId": null,
+                "description": null,
+                "sourceVersion": null,
+                "resourceType": "sp",
+                "productType": "product",
+                "sourceDataType": "product",
+                "code": "esIA001897:as1899372224617754624",
+                "name": "标签",
+                "realmId": "64216c2ee4b0a40fdd458091PL",
+                "spId": "230227193624162504",
+                "status": 1,
+                "creatorId": "system",
+                "createTime": "2025-03-11 16:10:11",
+                "updateTime": "2025-03-11 16:10:11",
+                "lastModifiedBy": "system",
+                "type": "front",
+                "index": null,
+                "formKey": "",
+                "url": "",
+                "perActions": [],
+                "actions": [],
+                "fileds": [],
+                "dataInfos": [],
+                "seq": 0,
+                "sourceId": "230309154932369256",
+                "sourceType": 2,
+                "productName": "埋点创建应用"
+              },
+              {
+                "id": "230309154932367991",
+                "defaultPermissions": null,
+                "extend": null,
+                "parentCode": null,
+                "resourceLevel": null,
+                "productId": null,
+                "description": null,
+                "sourceVersion": null,
+                "resourceType": "sp",
+                "productType": "product",
+                "sourceDataType": "product",
+                "code": "esIA001897:as1899372024637534208",
+                "name": "外链",
+                "realmId": "64216c2ee4b0a40fdd458091PL",
+                "spId": "230227193624162504",
+                "status": 1,
+                "creatorId": "system",
+                "createTime": "2025-03-11 16:10:11",
+                "updateTime": "2025-03-11 16:10:11",
+                "lastModifiedBy": "system",
+                "type": "front",
+                "index": null,
+                "formKey": "",
+                "url": "",
+                "perActions": [],
+                "actions": [],
+                "fileds": [],
+                "dataInfos": [],
+                "seq": 0,
+                "sourceId": "230309154932367963",
+                "sourceType": 2,
+                "productName": "埋点创建应用"
+              }
+            ]
+          },
+          "errcode": {
+            "type": "integer",
+            "example": 200
+          },
+          "errmsg": {
+            "type": "string",
+            "example": "成功"
+          },
+          "nextCursor": {
+            "type": "null"
+          },
+          "page": {
+            "type": "object",
+            "properties": {
+              "page": {
+                "type": "null"
+              },
+              "pageSize": {
+                "type": "null"
+              },
+              "sort": {
+                "type": "null"
+              },
+              "total": {
+                "type": "integer",
+                "example": 4584
+              },
+              "totalPages": {
+                "type": "integer",
+                "example": 1
+              },
+              "hasNext": {
+                "type": "boolean",
+                "example": false
+              }
+            }
+          }
+        }
+      },
+      "UnauthorizedError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 401
+          },
+          "message": {
+            "type": "string",
+            "example": "Unauthorized"
+          }
+        }
+      },
+      "HTTPValidationError": {
+        "type": "object",
+        "properties": {
+          "errcode": {
+            "type": "integer",
+            "example": 422
+          },
+          "message": {
+            "type": "string",
+            "example": "Validation Error"
+          }
+        }
+      }
+    }
+  }
+}
